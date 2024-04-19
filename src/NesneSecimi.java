@@ -1,21 +1,21 @@
 
 import java.awt.Color;
-import javax.swing.ImageIcon;
-
+import java.util.Random;
 
 public class NesneSecimi extends javax.swing.JFrame {
-    String[] nesneler=new String[5];
-    ImageIcon img1=new ImageIcon("/tas3.png");
-    ImageIcon img2=new ImageIcon("/kagıt3.png");
-    ImageIcon img3=new ImageIcon("/makas3.png");
+    static String[] nesneler=new String[5];
+    Random random = new Random();
     public int i=0;
     int secim=0;
-    /**
-     * Creates new form NesneSecimi
-     */
-    public NesneSecimi() {
+    Kullanici kullanici;
+    Bilgisayar bilgisayar;
+    public NesneSecimi(Kullanici _kullanici,Bilgisayar _bilgisayar) {
+        kullanici=_kullanici;
+        bilgisayar=_bilgisayar;
+        bilgisayarrastgele();
         initComponents();
         getContentPane().setBackground(Color.gray);
+        İleriButton.setEnabled(false);
     }
 
     /**
@@ -27,6 +27,9 @@ public class NesneSecimi extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jDialog1 = new javax.swing.JDialog();
+        jDialog2 = new javax.swing.JDialog();
+        jDialog3 = new javax.swing.JDialog();
         TasButton = new javax.swing.JButton();
         KagitButton = new javax.swing.JButton();
         MakasButton = new javax.swing.JButton();
@@ -40,14 +43,49 @@ public class NesneSecimi extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        YerlestirButton = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
         İleriButton = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+
+        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
+        jDialog1.getContentPane().setLayout(jDialog1Layout);
+        jDialog1Layout.setHorizontalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jDialog1Layout.setVerticalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jDialog2Layout = new javax.swing.GroupLayout(jDialog2.getContentPane());
+        jDialog2.getContentPane().setLayout(jDialog2Layout);
+        jDialog2Layout.setHorizontalGroup(
+            jDialog2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jDialog2Layout.setVerticalGroup(
+            jDialog2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jDialog3Layout = new javax.swing.GroupLayout(jDialog3.getContentPane());
+        jDialog3.getContentPane().setLayout(jDialog3Layout);
+        jDialog3Layout.setHorizontalGroup(
+            jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jDialog3Layout.setVerticalGroup(
+            jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Nesne Seçimi");
+        setLocation(new java.awt.Point(487, 209));
         setResizable(false);
 
-        TasButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tas2.png"))); // NOI18N
+        TasButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tas.png"))); // NOI18N
         TasButton.setFocusPainted(false);
         TasButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -55,29 +93,19 @@ public class NesneSecimi extends javax.swing.JFrame {
             }
         });
 
-        KagitButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kagıt2.png"))); // NOI18N
+        KagitButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kagıt.png"))); // NOI18N
         KagitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 KagitButtonActionPerformed(evt);
             }
         });
 
-        MakasButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/makas2.png"))); // NOI18N
+        MakasButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/makas.png"))); // NOI18N
         MakasButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MakasButtonActionPerformed(evt);
             }
         });
-
-        Secim2.setText("a");
-
-        Secim1.setText("a");
-
-        Secim3.setText("a");
-
-        Secim4.setText("a");
-
-        Secim5.setText("a");
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel1.setText("Seçim 1");
@@ -94,19 +122,7 @@ public class NesneSecimi extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel5.setText("Seçim 5");
 
-        YerlestirButton.setBackground(new java.awt.Color(204, 204, 204));
-        YerlestirButton.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        YerlestirButton.setText("---->");
-        YerlestirButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                YerlestirButtonActionPerformed(evt);
-            }
-        });
-
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel6.setText("YERLEŞTİR");
-
-        İleriButton.setBackground(new java.awt.Color(51, 51, 255));
+        İleriButton.setBackground(new java.awt.Color(102, 102, 255));
         İleriButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         İleriButton.setText("İLERİ");
         İleriButton.addActionListener(new java.awt.event.ActionListener() {
@@ -114,6 +130,13 @@ public class NesneSecimi extends javax.swing.JFrame {
                 İleriButtonActionPerformed(evt);
             }
         });
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
+        jLabel7.setText("---->");
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel6.setText("KART SEÇİM");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -125,75 +148,77 @@ public class NesneSecimi extends javax.swing.JFrame {
                     .addComponent(TasButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(MakasButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(KagitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
+                .addGap(83, 83, 83)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(YerlestirButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(İleriButton, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(82, 82, 82)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(Secim5, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                        .addComponent(jLabel5))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(Secim4, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel4))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(Secim3, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(Secim1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(Secim2, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel2)))
-                .addGap(21, 21, 21))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(İleriButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(83, 83, 83)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Secim5, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel5))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Secim4, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel4))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Secim3, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel3))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Secim1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel1))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Secim2, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel2)))))
+                .addGap(33, 33, 33))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
+                .addContainerGap()
+                .addComponent(jLabel6)
+                .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Secim1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Secim2, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(27, 27, 27)
-                                .addComponent(jLabel3))
+                                .addGap(22, 22, 22)
+                                .addComponent(jLabel1)
+                                .addGap(46, 46, 46)
+                                .addComponent(jLabel2))
                             .addGroup(layout.createSequentialGroup()
+                                .addComponent(Secim1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(Secim3, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(14, 14, 14)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Secim4, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Secim5, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5)))
+                                .addComponent(Secim2, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(25, 25, 25)
+                                .addComponent(jLabel3)
+                                .addGap(57, 57, 57)
+                                .addComponent(jLabel4)
+                                .addGap(57, 57, 57)
+                                .addComponent(jLabel5))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(Secim3, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(Secim4, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(Secim5, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(YerlestirButton, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(12, 12, 12))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(TasButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(KagitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(TasButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(KagitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(31, 31, 31)
@@ -201,138 +226,196 @@ public class NesneSecimi extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
                                 .addComponent(MakasButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addGap(50, 50, 50))
         );
 
         KagitButton.getAccessibleContext().setAccessibleName("KagitButton");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    public void bilgisayarrastgele(){
+        for (int i = 0; i < 5; i++) {
+            int rast = random.nextInt(1, 4);
+            if(rast==1){
+                bilgisayar.nesnesecimleri.add(new Tas());
+                Oyun.logger.info("Bilgisayar --> Taş nesnesini Seçti.");
+            }
+            if (rast==2) {
+                bilgisayar.nesnesecimleri.add(new Kagit());
+                Oyun.logger.info("Bilgisayar --> Kağıt nesnesini Seçti.");
+            }
+            if (rast==3) {
+                bilgisayar.nesnesecimleri.add(new Makas());
+                Oyun.logger.info("Bilgisayar --> Makas nesnesini Seçti.");
+            }
+        }
+    }
     private void TasButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TasButtonActionPerformed
         i++;
+        Secim1.setVisible(true);
+        Secim2.setVisible(true);
+        Secim3.setVisible(true);
+        Secim4.setVisible(true);
+        Secim5.setVisible(true);
         nesneler[secim]="Tas";
         if(secim==0)
         {
-            
+            Secim1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tas2.png")));
             Secim1.setText(nesneler[secim]);
-            Secim1.setVisible(false);
+            kullanici.nesnesecimleri.add(new Tas());
+            Oyun.logger.info("Kullanıcı --> Taş nesnesini seçti.");
         }
         else if(secim==1)
         {
-            
+            Secim2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tas2.png")));
             Secim2.setText(nesneler[secim]);
-            Secim2.setVisible(false);
+            kullanici.nesnesecimleri.add(new Tas());
+            Oyun.logger.info("Kullanıcı --> Taş nesnesini seçti.");
         }
         else if(secim==2)
         {
-            
+            Secim3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tas2.png")));
             Secim3.setText(nesneler[secim]);
-            Secim3.setVisible(false);
+            kullanici.nesnesecimleri.add(new Tas());
+            Oyun.logger.info("Kullanıcı --> Taş nesnesini seçti.");
         }
         else if(secim==3)
         {
-            
+            Secim4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tas2.png")));
             Secim4.setText(nesneler[secim]);
-            Secim4.setVisible(false);
+            kullanici.nesnesecimleri.add(new Tas());
+            Oyun.logger.info("Kullanıcı --> Taş nesnesini seçti.");
         }
         else if(secim==4)
         {
-            
+            Secim5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tas2.png")));
             Secim5.setText(nesneler[secim]);
-            Secim5.setVisible(false);
+            kullanici.nesnesecimleri.add(new Tas());
+            Oyun.logger.info("Kullanıcı --> Taş nesnesini seçti.");
         }
         
         if(i==5){
             TasButton.setEnabled(false);
             KagitButton.setEnabled(false);
             MakasButton.setEnabled(false);
+            İleriButton.setEnabled(true);   
         }
         secim++;
     }//GEN-LAST:event_TasButtonActionPerformed
 
     private void KagitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KagitButtonActionPerformed
         i++;
-        nesneler[secim]="Kağıt";
-        if(secim==0)
-        {
-            Secim1.setText(nesneler[secim]);
-            Secim1.setVisible(false);
-        }
-        else if(secim==1)
-        {         
-            Secim2.setText(nesneler[secim]);
-            Secim2.setVisible(false);
-        }
-        else if(secim==2)
-        {           
-            Secim3.setText(nesneler[secim]);
-            Secim3.setVisible(false);
-        }
-        else if(secim==3)
-        {    
-            Secim4.setText(nesneler[secim]);
-            Secim4.setVisible(false);
-        }
-        else if(secim==4)
-        {    
-            Secim5.setText(nesneler[secim]);
-            Secim5.setVisible(false);
-        }
-        if(i==5){
-            TasButton.setEnabled(false);
-            KagitButton.setEnabled(false);
-            MakasButton.setEnabled(false);
-        }
-        secim++;
-    }//GEN-LAST:event_KagitButtonActionPerformed
-
-    private void MakasButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MakasButtonActionPerformed
-        i++;
-        nesneler[secim]="Makas";
-        if(secim==0)
-        {
-            Secim1.setText(nesneler[secim]);
-            Secim1.setVisible(false);
-        }
-        else if(secim==1)
-        {   
-            Secim2.setText(nesneler[secim]);
-            Secim2.setVisible(false);
-        }
-        else if(secim==2)
-        {   
-            Secim3.setText(nesneler[secim]);
-            Secim3.setVisible(false);
-        }
-        else if(secim==3)
-        {      
-            Secim4.setText(nesneler[secim]);
-            Secim4.setVisible(false);
-        }
-        else if(secim==4)
-        {     
-            Secim5.setText(nesneler[secim]);
-            Secim5.setVisible(false);
-        }
-        if(i==5){
-            TasButton.setEnabled(false);
-            KagitButton.setEnabled(false);
-            MakasButton.setEnabled(false);
-        }
-        secim++;
-    }//GEN-LAST:event_MakasButtonActionPerformed
-
-    private void YerlestirButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_YerlestirButtonActionPerformed
         Secim1.setVisible(true);
         Secim2.setVisible(true);
         Secim3.setVisible(true);
         Secim4.setVisible(true);
         Secim5.setVisible(true);
-    }//GEN-LAST:event_YerlestirButtonActionPerformed
+        nesneler[secim]="Kağıt";
+        if(secim==0)
+        {
+            Secim1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kagıt2.png")));
+            Secim1.setText(nesneler[secim]);
+            kullanici.nesnesecimleri.add(new Kagit());
+            Oyun.logger.info("Kullanıcı --> Kağıt nesnesini seçti.");
+        }
+        else if(secim==1)
+        {   
+            Secim2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kagıt2.png")));
+            Secim2.setText(nesneler[secim]);
+            kullanici.nesnesecimleri.add(new Kagit());
+            Oyun.logger.info("Kullanıcı --> Kağıt nesnesini seçti.");
+        }
+        else if(secim==2)
+        {         
+            Secim3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kagıt2.png")));
+            Secim3.setText(nesneler[secim]);
+            kullanici.nesnesecimleri.add(new Kagit());
+            Oyun.logger.info("Kullanıcı --> Kağıt nesnesini seçti.");
+        }
+        else if(secim==3)
+        {    
+            Secim4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kagıt2.png")));
+            Secim4.setText(nesneler[secim]);
+            kullanici.nesnesecimleri.add(new Kagit());
+            Oyun.logger.info("Kullanıcı --> Kağıt nesnesini seçti.");
+        }
+        else if(secim==4)
+        {    
+            Secim5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kagıt2.png")));
+            Secim5.setText(nesneler[secim]);
+            kullanici.nesnesecimleri.add(new Kagit());
+            Oyun.logger.info("Kullanıcı --> Kağıt nesnesini seçti.");
+        }
+        if(i==5){
+            TasButton.setEnabled(false);
+            KagitButton.setEnabled(false);
+            MakasButton.setEnabled(false);
+            İleriButton.setEnabled(true);
+        }
+        secim++;
+    }//GEN-LAST:event_KagitButtonActionPerformed
 
-    private void İleriButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_İleriButtonActionPerformed
+    private void MakasButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MakasButtonActionPerformed
         
+        i++;
+        Secim1.setVisible(true);
+        Secim2.setVisible(true);
+        Secim3.setVisible(true);
+        Secim4.setVisible(true);
+        Secim5.setVisible(true);
+        nesneler[secim]="Makas";
+        if(secim==0)
+        {
+            Secim1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/makas2.png")));
+            Secim1.setText(nesneler[secim]);
+            kullanici.nesnesecimleri.add(new Makas());
+            Oyun.logger.info("Kullanıcı --> Makas nesnesini seçti.");
+
+        }
+        else if(secim==1)
+        {   
+            Secim2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/makas2.png")));
+            Secim2.setText(nesneler[secim]);
+            kullanici.nesnesecimleri.add(new Makas());
+            Oyun.logger.info("Kullanıcı --> Makas nesnesini seçti.");
+        }
+        else if(secim==2)
+        {   
+            Secim3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/makas2.png")));
+            Secim3.setText(nesneler[secim]);
+            kullanici.nesnesecimleri.add(new Makas());
+            Oyun.logger.info("Kullanıcı --> Makas nesnesini seçti.");
+        }
+        else if(secim==3)
+        {      
+            Secim4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/makas2.png")));
+            Secim4.setText(nesneler[secim]);
+            kullanici.nesnesecimleri.add(new Makas());
+            Oyun.logger.info("Kullanıcı --> Makas nesnesini seçti.");
+        }
+        else if(secim==4)
+        {     
+            Secim5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/makas2.png")));
+            Secim5.setText(nesneler[secim]);
+            kullanici.nesnesecimleri.add(new Makas());
+            Oyun.logger.info("Kullanıcı --> Makas nesnesini seçti.");
+        }
+        if(i==5){
+            TasButton.setEnabled(false);
+            KagitButton.setEnabled(false);
+            MakasButton.setEnabled(false);
+            İleriButton.setEnabled(true);
+        }
+        secim++;
+        
+    }//GEN-LAST:event_MakasButtonActionPerformed
+    private void İleriButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_İleriButtonActionPerformed
+        OyunEkrani1 oyunekrani=new OyunEkrani1(kullanici,bilgisayar);
+        for (int j = 0; j < 5; j++) {
+            oyunekrani.secim[j]=nesneler[j];
+        }
+        oyunekrani.setVisible(true);
+        setVisible(false);  
     }//GEN-LAST:event_İleriButtonActionPerformed
 
     /**
@@ -365,7 +448,7 @@ public class NesneSecimi extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new NesneSecimi().setVisible(true);
+                new NesneSecimi(new Kullanici(),new Bilgisayar()).setVisible(true);
             }
         });
     }
@@ -379,13 +462,16 @@ public class NesneSecimi extends javax.swing.JFrame {
     private javax.swing.JLabel Secim4;
     private javax.swing.JLabel Secim5;
     private javax.swing.JButton TasButton;
-    private javax.swing.JButton YerlestirButton;
+    private javax.swing.JDialog jDialog1;
+    private javax.swing.JDialog jDialog2;
+    private javax.swing.JDialog jDialog3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JButton İleriButton;
     // End of variables declaration//GEN-END:variables
 }

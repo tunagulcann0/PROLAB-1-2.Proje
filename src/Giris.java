@@ -1,17 +1,26 @@
 
 import java.awt.Color;
+import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 
 
 public class Giris extends javax.swing.JFrame {
-    OyuncuSecimi oyuncusecim=new OyuncuSecimi();
+
     /**
      * Creates new form Giris
      */
-    public Giris() {
+    Kullanici kullanici;
+    Bilgisayar bilgisayar;
+    Bilgisayar bilgisayar1;
+
+    public Giris(Kullanici _kullanici,Bilgisayar _bilgisayar,Bilgisayar _bilgisayar1) {
+        kullanici=_kullanici;
+        bilgisayar=_bilgisayar;
+        bilgisayar1=_bilgisayar1;
         initComponents();
         getContentPane().setBackground(Color.gray);
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -25,13 +34,15 @@ public class Giris extends javax.swing.JFrame {
         OynaButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Giriş Ekranı");
+        setLocation(new java.awt.Point(531, 281));
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 28)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel1.setText("TAŞ-KAĞIT-MAKAS OYUNU");
 
-        OynaButton.setBackground(new java.awt.Color(51, 51, 255));
+        OynaButton.setBackground(new java.awt.Color(102, 102, 255));
         OynaButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         OynaButton.setText("OYNA");
         OynaButton.addActionListener(new java.awt.event.ActionListener() {
@@ -45,28 +56,29 @@ public class Giris extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(193, 193, 193)
                 .addComponent(OynaButton)
-                .addGap(176, 176, 176))
+                .addGap(193, 193, 193))
             .addGroup(layout.createSequentialGroup()
-                .addGap(37, 37, 37)
+                .addGap(50, 50, 50)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addGap(50, 50, 50))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(85, 85, 85)
+                .addGap(89, 89, 89)
                 .addComponent(jLabel1)
                 .addGap(36, 36, 36)
                 .addComponent(OynaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addGap(89, 89, 89))
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>//GEN-END:initComponentsS
 
     private void OynaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OynaButtonActionPerformed
+        OyuncuSecimi oyuncusecim=new OyuncuSecimi(kullanici,bilgisayar,bilgisayar1);
         oyuncusecim.setVisible(true);
         setVisible(false);
     }//GEN-LAST:event_OynaButtonActionPerformed
@@ -101,7 +113,7 @@ public class Giris extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Giris().setVisible(true);
+                new Giris(new Kullanici(),new Bilgisayar(),new Bilgisayar()).setVisible(true);
             }
         });
     }

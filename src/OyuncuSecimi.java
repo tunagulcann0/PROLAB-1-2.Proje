@@ -2,16 +2,35 @@
 import java.awt.Color;
 
 
+
 public class OyuncuSecimi extends javax.swing.JFrame {
-    BilgiEkrani bilgi=new BilgiEkrani();
+    Kullanici kullanici;
+    Bilgisayar bilgisayar;
+    Bilgisayar bilgisayar1;
+
+
+
+    char secenek;
+    
+    static int i;
+
+    public int getI() {
+        return i;
+    }
+
+    public void setI(int i) {
+        this.i = i;
+    }
     /**
      * Creates new form OyuncuSecimi
      */
-    public OyuncuSecimi() {
+    public OyuncuSecimi(Kullanici _kullanici,Bilgisayar _bilgisayar,Bilgisayar _bilgisayar1) {
+        kullanici=_kullanici;
+        bilgisayar=_bilgisayar;
+        bilgisayar1=_bilgisayar1;
         initComponents();
         getContentPane().setBackground(Color.gray);
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -27,13 +46,14 @@ public class OyuncuSecimi extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Oyuncu Seçim Ekranı");
+        setLocation(new java.awt.Point(532, 272));
         setResizable(false);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel1.setText("HOŞGELDİNİZ");
 
-        UserPc.setBackground(new java.awt.Color(51, 51, 255));
         UserPc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/user-pc.jpg"))); // NOI18N
         UserPc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,17 +78,17 @@ public class OyuncuSecimi extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addComponent(UserPc, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
                 .addComponent(PcPc, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40))
+                .addGap(35, 35, 35))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(149, 149, 149)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(129, 129, 129)
-                        .addComponent(jLabel2)))
+                        .addComponent(jLabel2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(149, 149, 149)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -89,12 +109,17 @@ public class OyuncuSecimi extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     //setIcon(new javax.swing.ImageIcon(getClass().getResource("e/usr2.png")));
     private void UserPcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UserPcActionPerformed
+        Oyun.logger.info("Kullanıcı - Bilgisayar Mücadelesi Seçildi.");
+        BilgiEkrani bilgi=new BilgiEkrani(kullanici,bilgisayar);
         bilgi.setVisible(true);
         setVisible(false);
     }//GEN-LAST:event_UserPcActionPerformed
 
     private void PcPcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PcPcActionPerformed
-        // TODO add your handling code here:
+        Oyun.logger.info("Bilgisayar - Bilgisayar Mücadelesi Seçildi.");
+        OyunEkrani2 oyunekrani2=new OyunEkrani2(bilgisayar,bilgisayar1);
+        oyunekrani2.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_PcPcActionPerformed
 
     /**
@@ -127,7 +152,7 @@ public class OyuncuSecimi extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new OyuncuSecimi().setVisible(true);
+                new OyuncuSecimi(new Kullanici(),new Bilgisayar(),new Bilgisayar()).setVisible(true);
             }
         });
     }

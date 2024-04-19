@@ -1,17 +1,24 @@
 
 import java.awt.Color;
 
+public class BilgiEkrani extends javax.swing.JFrame { 
 
-public class BilgiEkrani extends javax.swing.JFrame {
-    NesneSecimi nesnesec=new NesneSecimi();
+
+    int tespit=0;
+    Kullanici kullanici;
+    Bilgisayar bilgisayar;
     /**
      * Creates new form BilgiEkrani
      */
-    public BilgiEkrani() {
+    public BilgiEkrani(Kullanici _kullanici,Bilgisayar _bilgisayar) {
+        kullanici=_kullanici;
+        bilgisayar=_bilgisayar;
         initComponents();
         getContentPane().setBackground(Color.gray);
+        İleriButton.setEnabled(true);
+        Hata1.setVisible(false);
+        Hata2.setVisible(false);
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -26,24 +33,37 @@ public class BilgiEkrani extends javax.swing.JFrame {
         KullanıcıAdı = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         KullanıcıID = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        HamleSayısı = new javax.swing.JTextField();
         İleriButton = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        Hata1 = new javax.swing.JLabel();
+        Hata2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Bilgi Ekranı");
+        setLocation(new java.awt.Point(555, 286));
+        setResizable(false);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/user2.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/user.jpg"))); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel2.setText("Kullanıcı Adı:");
 
+        KullanıcıAdı.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                KullanıcıAdıActionPerformed(evt);
+            }
+        });
+
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel3.setText("Kullanıcı ID:");
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel4.setText("Hamle Sayısı:");
+        KullanıcıID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                KullanıcıIDActionPerformed(evt);
+            }
+        });
 
-        İleriButton.setBackground(new java.awt.Color(51, 51, 255));
+        İleriButton.setBackground(new java.awt.Color(102, 102, 255));
         İleriButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         İleriButton.setText("İLERİ");
         İleriButton.addActionListener(new java.awt.event.ActionListener() {
@@ -52,6 +72,22 @@ public class BilgiEkrani extends javax.swing.JFrame {
             }
         });
 
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel5.setText("BİLGİ EKRANI");
+
+        Hata1.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        Hata1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Hata1.setForeground(new java.awt.Color(255, 0, 0));
+        Hata1.setText("X");
+        Hata1.setToolTipText("");
+
+        Hata2.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        Hata2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Hata2.setForeground(new java.awt.Color(255, 0, 0));
+        Hata2.setText("X");
+        Hata2.setToolTipText("");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -59,54 +95,94 @@ public class BilgiEkrani extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(KullanıcıAdı)
-                    .addComponent(KullanıcıID)
-                    .addComponent(HamleSayısı, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE))
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 74, Short.MAX_VALUE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(KullanıcıID, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(Hata2))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(KullanıcıAdı, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(Hata1)))
+                        .addContainerGap(21, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(İleriButton)
+                        .addGap(70, 70, 70))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(İleriButton)
-                .addGap(66, 66, 66))
+                .addComponent(jLabel5)
+                .addGap(147, 147, 147))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addContainerGap()
+                .addComponent(jLabel5)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
+                        .addGap(29, 29, 29)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(65, 65, 65)
+                        .addGap(58, 58, 58)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
-                            .addComponent(KullanıcıAdı, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(KullanıcıAdı, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Hata1))
+                        .addGap(47, 47, 47)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
-                            .addComponent(KullanıcıID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(38, 38, 38)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(HamleSayısı, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addComponent(İleriButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
+                            .addComponent(KullanıcıID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Hata2))
+                        .addGap(29, 29, 29)
+                        .addComponent(İleriButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(55, 55, 55))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void İleriButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_İleriButtonActionPerformed
+       if(kullanici.getOyuncuAdi()==null){
+           Hata1.setVisible(true);
+           Hata2.setVisible(false);
+        }  
+        else if(kullanici.getOyuncuID()==null){
+           Hata2.setVisible(true);
+           Hata1.setVisible(false);
+        }
+        if(kullanici.getOyuncuAdi()==null && kullanici.getOyuncuID()==null){
+            Hata1.setVisible(true);
+            Hata2.setVisible(true);
+        }
+        
+        if(kullanici.getOyuncuAdi()!=null && kullanici.getOyuncuID()!=null){
+        Hata1.setVisible(false);
+        Hata2.setVisible(false);
+        NesneSecimi nesnesec=new NesneSecimi(kullanici,bilgisayar);
         nesnesec.setVisible(true);
-        setVisible(false);
+        setVisible(false);   
+        }
     }//GEN-LAST:event_İleriButtonActionPerformed
+    
+    private void KullanıcıAdıActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KullanıcıAdıActionPerformed
+        Oyun.logger.info("Kullanıcı adı girildi");
+        KullanıcıAdı.getText();
+       kullanici.setOyuncuAdi(KullanıcıAdı.getText());   
+    }//GEN-LAST:event_KullanıcıAdıActionPerformed
+
+    private void KullanıcıIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KullanıcıIDActionPerformed
+       Oyun.logger.info("Kullanıcı ID girildi.");
+        KullanıcıID.getText();
+       kullanici.setOyuncuID(KullanıcıID.getText());
+    }//GEN-LAST:event_KullanıcıIDActionPerformed
 
     /**
      * @param args the command line arguments
@@ -138,19 +214,20 @@ public class BilgiEkrani extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new BilgiEkrani().setVisible(true);
+                new BilgiEkrani(new Kullanici(),new Bilgisayar()).setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField HamleSayısı;
+    private javax.swing.JLabel Hata1;
+    private javax.swing.JLabel Hata2;
     private javax.swing.JTextField KullanıcıAdı;
     private javax.swing.JTextField KullanıcıID;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JButton İleriButton;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,15 +1,51 @@
 
+import java.awt.Color;
+
  public class OyunEkrani1 extends javax.swing.JFrame {
-       NesneSecimi nesneSecimi = new NesneSecimi();
-       
+     private int hamlesayisi;
+     private int kontrol=0;
+     private String hh;
+     
+       String[] secim=new String[5];
+       int sayac=0,nesnesayisi=5;
+       private double skor1=100,skor2=100;
+       Kullanici kullanici;
+       Bilgisayar bilgisayar;
     /**
      * Creates new form OyunEkrani1
      */
-    public OyunEkrani1() {
-        System.out.println(nesneSecimi.nesneler);
+    public OyunEkrani1(Kullanici _kullanici,Bilgisayar _bilgisayar) {
+        kullanici=_kullanici;
+        bilgisayar=_bilgisayar;
         initComponents();
+        getContentPane().setBackground(Color.gray);
+        Oyuncu1Resim.setVisible(true);
+        Oyuncu2Resim.setVisible(true);
+        Hamle1Seviye.setEnabled(false);
+        Hamle1Dayanıklılık.setEnabled(false);
+        Hamle2Seviye.setEnabled(false);
+        Hamle2Dayanıklılık.setEnabled(false);
+        Hamle3Seviye.setEnabled(false);
+        Hamle3Dayanıklılık.setEnabled(false);
+        Hamle4Seviye.setEnabled(false);
+        Hamle4Dayanıklılık.setEnabled(false);
+        Hamle5Seviye.setEnabled(false);
+        Hamle5Dayanıklılık.setEnabled(false);
+        Hamle1Seviye.setVisible(false);
+        Hamle1Dayanıklılık.setVisible(false);
+        Hamle2Seviye.setVisible(false);
+        Hamle2Dayanıklılık.setVisible(false);
+        Hamle3Seviye.setVisible(false);
+        Hamle3Dayanıklılık.setVisible(false);
+        Hamle4Seviye.setVisible(false);
+        Hamle4Dayanıklılık.setVisible(false);
+        Hamle5Seviye.setVisible(false);
+        Hamle5Dayanıklılık.setVisible(false);
+        HamleGoster.setEnabled(false);
+        Oyuncu1Skor.setEnabled(false);
+        Oyuncu2Skor.setEnabled(false);
+        KalanNesne.setEnabled(false);
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -19,176 +55,1075 @@
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        Oyuncu2Resim = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        Oyuncu1Hamle = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        SecimOyuncu2 = new javax.swing.JLabel();
+        SecimOyuncu1 = new javax.swing.JLabel();
+        OynatButton = new javax.swing.JButton();
+        Hamle1 = new javax.swing.JButton();
+        Hamle2 = new javax.swing.JButton();
+        Hamle3 = new javax.swing.JButton();
+        Hamle4 = new javax.swing.JButton();
+        Hamle5 = new javax.swing.JButton();
+        Oyuncu1İsim = new javax.swing.JLabel();
+        Oyuncu2İsim = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        Oyuncu2Resim = new javax.swing.JLabel();
+        Oyuncu1Resim = new javax.swing.JLabel();
+        HamleGoster = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        Oyuncu1Skor = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
+        Oyuncu2Skor = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
+        KalanNesne = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        HamleSayısı = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        Hamle1Dayanıklılık = new javax.swing.JTextField();
+        Hamle1Seviye = new javax.swing.JTextField();
+        Hamle2Dayanıklılık = new javax.swing.JTextField();
+        Hamle2Seviye = new javax.swing.JTextField();
+        Hamle3Seviye = new javax.swing.JTextField();
+        Hamle4Dayanıklılık = new javax.swing.JTextField();
+        Hamle4Seviye = new javax.swing.JTextField();
+        Hamle5Dayanıklılık = new javax.swing.JTextField();
+        Hamle5Seviye = new javax.swing.JTextField();
+        Hamle3Dayanıklılık = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Oyun Ekranı");
+        setLocation(new java.awt.Point(333, 132));
+        setResizable(false);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 150, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 150, Short.MAX_VALUE)
-        );
+        SecimOyuncu1.setBackground(new java.awt.Color(255, 0, 0));
+        SecimOyuncu1.setForeground(new java.awt.Color(255, 0, 0));
 
-        Oyuncu2Resim.setIcon(new javax.swing.ImageIcon(getClass().getResource("/user2.png"))); // NOI18N
+        OynatButton.setBackground(new java.awt.Color(102, 102, 255));
+        OynatButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        OynatButton.setText("X");
+        OynatButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OynatButtonActionPerformed(evt);
+            }
+        });
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(Oyuncu2Resim)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(Oyuncu2Resim)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        Hamle1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Hamle1ActionPerformed(evt);
+            }
+        });
 
-        Oyuncu1Hamle.setText("jLabel2");
+        Hamle2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Hamle2ActionPerformed(evt);
+            }
+        });
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Oyuncu1Hamle, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Oyuncu1Hamle, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-        );
+        Hamle3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Hamle3ActionPerformed(evt);
+            }
+        });
 
-        jLabel8.setText("jLabel8");
+        Hamle4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Hamle4ActionPerformed(evt);
+            }
+        });
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE))
-        );
+        Hamle5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Hamle5ActionPerformed(evt);
+            }
+        });
 
-        jLabel2.setText("jLabel2");
+        Oyuncu1İsim.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Oyuncu1İsim.setText("Kullanıcı");
 
-        jLabel3.setText("jLabel3");
+        Oyuncu2İsim.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Oyuncu2İsim.setText("Bilgisayar");
 
-        jLabel4.setText("jLabel4");
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel3.setText("SAVAŞ ARENASI");
 
-        jLabel5.setText("jLabel5");
+        Oyuncu2Resim.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pc.jpg"))); // NOI18N
 
-        jLabel6.setText("jLabel6");
+        Oyuncu1Resim.setIcon(new javax.swing.ImageIcon(getClass().getResource("/user2.jpg"))); // NOI18N
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        HamleGoster.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        HamleGoster.setText("KARTLARI/DEĞERLERİ GÖSTER");
+        HamleGoster.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HamleGosterActionPerformed(evt);
+            }
+        });
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel7.setText("HAMLELER");
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setText("SKOR");
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/user2.png"))); // NOI18N
+        Oyuncu1Skor.setBackground(new java.awt.Color(80, 80, 80));
+        Oyuncu1Skor.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Oyuncu1Skor.setForeground(new java.awt.Color(255, 255, 255));
+        Oyuncu1Skor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Oyuncu1SkorActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setText("SKOR");
+
+        Oyuncu2Skor.setBackground(new java.awt.Color(80, 80, 80));
+        Oyuncu2Skor.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Oyuncu2Skor.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setText("KALAN NESNE");
+
+        KalanNesne.setBackground(new java.awt.Color(80, 80, 80));
+        KalanNesne.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        KalanNesne.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel7.setText("HAMLE SAYISI:");
+
+        HamleSayısı.setBackground(new java.awt.Color(80, 80, 80));
+        HamleSayısı.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        HamleSayısı.setForeground(new java.awt.Color(255, 255, 255));
+        HamleSayısı.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HamleSayısıActionPerformed(evt);
+            }
+        });
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel8.setText("Dayanıklılık:");
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel9.setText("Seviye Puanı:");
+
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel10.setText("Dayanıklılık:");
+
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel11.setText("Seviye Puanı:");
+
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel12.setText("Dayanıklılık:");
+
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel13.setText("Seviye Puanı:");
+
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel14.setText("Dayanıklılık:");
+
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel15.setText("Seviye Puanı:");
+
+        jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel16.setText("Dayanıklılık:");
+
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel17.setText("Seviye Puanı:");
+
+        Hamle1Dayanıklılık.setBackground(new java.awt.Color(80, 80, 80));
+        Hamle1Dayanıklılık.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Hamle1Dayanıklılık.setForeground(new java.awt.Color(255, 255, 255));
+        Hamle1Dayanıklılık.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Hamle1DayanıklılıkActionPerformed(evt);
+            }
+        });
+
+        Hamle1Seviye.setBackground(new java.awt.Color(80, 80, 80));
+        Hamle1Seviye.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Hamle1Seviye.setForeground(new java.awt.Color(255, 255, 255));
+        Hamle1Seviye.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Hamle1SeviyeActionPerformed(evt);
+            }
+        });
+
+        Hamle2Dayanıklılık.setBackground(new java.awt.Color(80, 80, 80));
+        Hamle2Dayanıklılık.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Hamle2Dayanıklılık.setForeground(new java.awt.Color(255, 255, 255));
+        Hamle2Dayanıklılık.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Hamle2DayanıklılıkActionPerformed(evt);
+            }
+        });
+
+        Hamle2Seviye.setBackground(new java.awt.Color(80, 80, 80));
+        Hamle2Seviye.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Hamle2Seviye.setForeground(new java.awt.Color(255, 255, 255));
+        Hamle2Seviye.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Hamle2SeviyeActionPerformed(evt);
+            }
+        });
+
+        Hamle3Seviye.setBackground(new java.awt.Color(80, 80, 80));
+        Hamle3Seviye.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Hamle3Seviye.setForeground(new java.awt.Color(255, 255, 255));
+        Hamle3Seviye.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Hamle3SeviyeActionPerformed(evt);
+            }
+        });
+
+        Hamle4Dayanıklılık.setBackground(new java.awt.Color(80, 80, 80));
+        Hamle4Dayanıklılık.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Hamle4Dayanıklılık.setForeground(new java.awt.Color(255, 255, 255));
+        Hamle4Dayanıklılık.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Hamle4DayanıklılıkActionPerformed(evt);
+            }
+        });
+
+        Hamle4Seviye.setBackground(new java.awt.Color(80, 80, 80));
+        Hamle4Seviye.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Hamle4Seviye.setForeground(new java.awt.Color(255, 255, 255));
+        Hamle4Seviye.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Hamle4SeviyeActionPerformed(evt);
+            }
+        });
+
+        Hamle5Dayanıklılık.setBackground(new java.awt.Color(80, 80, 80));
+        Hamle5Dayanıklılık.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Hamle5Dayanıklılık.setForeground(new java.awt.Color(255, 255, 255));
+        Hamle5Dayanıklılık.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Hamle5DayanıklılıkActionPerformed(evt);
+            }
+        });
+
+        Hamle5Seviye.setBackground(new java.awt.Color(80, 80, 80));
+        Hamle5Seviye.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Hamle5Seviye.setForeground(new java.awt.Color(255, 255, 255));
+        Hamle5Seviye.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Hamle5SeviyeActionPerformed(evt);
+            }
+        });
+
+        Hamle3Dayanıklılık.setBackground(new java.awt.Color(80, 80, 80));
+        Hamle3Dayanıklılık.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Hamle3Dayanıklılık.setForeground(new java.awt.Color(255, 255, 255));
+        Hamle3Dayanıklılık.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Hamle3DayanıklılıkActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(67, 67, 67)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(HamleGoster)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(Hamle1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(26, 26, 26)
+                                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(13, 13, 13)
+                                        .addComponent(Oyuncu1Skor, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel8)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(Hamle1Dayanıklılık, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel9)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Hamle1Seviye, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(38, 38, 38)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel11)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Hamle2Seviye, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel10)
+                                        .addGap(12, 12, 12)
+                                        .addComponent(Hamle2Dayanıklılık, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(SecimOyuncu1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(Hamle2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(38, 38, 38)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jLabel13)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Hamle3Seviye, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(Hamle3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(41, 41, 41)
+                                                .addComponent(OynatButton)))
+                                        .addGap(38, 38, 38)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(SecimOyuncu2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jLabel15)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Hamle4Seviye, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jLabel14)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(Hamle4Dayanıklılık, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(Hamle4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel12)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(Hamle3Dayanıklılık, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Oyuncu1Resim, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(178, 178, 178)
+                                .addComponent(jLabel7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(HamleSayısı, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(92, 92, 92)
+                        .addComponent(Oyuncu1İsim, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(27, 27, 27)
+                                .addComponent(Oyuncu2Skor, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(70, 70, 70))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addGap(86, 86, 86)
-                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel16)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(Hamle5Dayanıklılık, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel17)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Hamle5Seviye, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(Oyuncu2Resim, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel6)))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(KalanNesne, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(Hamle5, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(40, 40, 40)
+                                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap())))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(Oyuncu2İsim)
+                        .addGap(85, 85, 85))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(362, 362, 362))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(53, 53, 53)
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addGap(13, 13, 13)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Oyuncu1İsim)
+                    .addComponent(Oyuncu2İsim))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Oyuncu1Resim, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Oyuncu2Resim, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel7)
+                        .addComponent(HamleSayısı, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Oyuncu1Skor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(17, 17, 17)
+                                        .addComponent(OynatButton))))
+                            .addComponent(SecimOyuncu1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(SecimOyuncu2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(52, 52, 52)
+                        .addComponent(HamleGoster))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Oyuncu2Skor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(KalanNesne, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(61, 61, 61)
-                .addComponent(jLabel7)
+                    .addComponent(Hamle4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Hamle5, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(Hamle2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Hamle1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Hamle3, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel8)
+                        .addComponent(Hamle1Dayanıklılık, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel10)
+                        .addComponent(Hamle2Dayanıklılık, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel12)
+                        .addComponent(Hamle3Dayanıklılık, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel14)
+                        .addComponent(Hamle4Dayanıklılık, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel16)
+                        .addComponent(Hamle5Dayanıklılık, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel9)
+                        .addComponent(Hamle1Seviye, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel11)
+                        .addComponent(Hamle2Seviye, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel13)
+                        .addComponent(Hamle3Seviye, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel15)
+                        .addComponent(Hamle4Seviye, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel17)
+                        .addComponent(Hamle5Seviye, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
-
-        jLabel1.getAccessibleContext().setAccessibleName("Oyuncu1Resim");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Hamle1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Hamle1ActionPerformed
+        sayac++;
+        kontrol++;
+        int a=bilgisayar.nesneSec();
+        Oyun.logger.info("Kullanici "+ kullanici.nesnesecimleri.get(0).getNesneismi()+" nesnesini seçti");
+        Oyun.logger.info("Bilgisayar "+ bilgisayar.nesnesecimleri.get(a).getNesneismi()+" nesnesini seçti");
+        double etki1 = kullanici.nesnesecimleri.get(0).etkiHesapla(bilgisayar.nesnesecimleri.get(a));
+        double etki = bilgisayar.nesnesecimleri.get(a).etkiHesapla(kullanici.nesnesecimleri.get(0));
+        Oyun.logger.info(kullanici.nesnesecimleri.get(0)+" nesnesinin verdiği etki : "+etki1);
+        Oyun.logger.info(bilgisayar.nesnesecimleri.get(a)+" nesnesinin verdiği etki : "+etki);
+        int kazanan=0,kazanan1=0;
+        if (etki<etki1){
+            kazanan1=1;
+        }
+        else if(etki>etki1){
+            kazanan=1;
+        }
+        kullanici.nesnesecimleri.get(0).durumGuncelle(etki,kazanan1);
+        bilgisayar.nesnesecimleri.get(a).durumGuncelle(etki1,kazanan);
+        Oyun.logger.info(kullanici.nesnesecimleri.get(0).getNesneismi()+" nesnesi puanları güncellendi.");
+        Oyun.logger.info(bilgisayar.nesnesecimleri.get(a).getNesneismi()+" nesnesi puanları güncellendi.");
+        if (bilgisayar.nesnesecimleri.get(a).nesnePuaniGoster()>=30){
+            if (bilgisayar.nesnesecimleri.get(a).getClass().getSimpleName().equals("Tas")){
+                bilgisayar.nesnesecimleri.set(a,new Agir_Tas());
+                Oyun.logger.info("Bilgisayar'ın Taş nesnesi Ağır Taş nesnesine terfi edildi.");
+            }
+            if (bilgisayar.nesnesecimleri.get(a).getClass().getSimpleName().equals("Kagit")){
+                bilgisayar.nesnesecimleri.set(a,new Ozel_Kagit());
+                Oyun.logger.info("Bilgisayar'ın Kağıt nesnesi Özel Kağıt nesnesine terfi edildi.");
+            }
+            if (bilgisayar.nesnesecimleri.get(a).getClass().getSimpleName().equals("Makas")){
+                bilgisayar.nesnesecimleri.set(a,new Usta_Makas());
+                Oyun.logger.info("Bilgisayar'ın Makas nesnesi Usta Makas nesnesine terfi edildi.");
+            }
+        }
+        if (kullanici.nesnesecimleri.get(0).nesnePuaniGoster()>=30){
+            if (kullanici.nesnesecimleri.get(0).getClass().getSimpleName().equals("Tas")) {
+                kullanici.nesnesecimleri.set(0, new Agir_Tas());
+                Hamle1.setBackground(new java.awt.Color(102,0,102));
+                Oyun.logger.info("Kullanıcı'nın Taş nesnesi Ağır Taş nesnesine terfi edildi.");
+            }
+            if (kullanici.nesnesecimleri.get(0).getClass().getSimpleName().equals("Kagit")) {
+                kullanici.nesnesecimleri.set(0, new Ozel_Kagit());
+                Hamle1.setBackground(new java.awt.Color(102,0,102));
+                Oyun.logger.info("Kullanıcı'nın Kağıt nesnesi Özel Kağıt nesnesine terfi edildi.");
+            }
+            if (kullanici.nesnesecimleri.get(0).getClass().getSimpleName().equals("Makas")){
+                Hamle1.setBackground(new java.awt.Color(102,0,102));
+                kullanici.nesnesecimleri.set(0,new Usta_Makas());
+                Oyun.logger.info("Kullanıcı'nın Makas nesnesi Usta Makas nesnesine terfi edildi.");
+            }
+        }
+        if(bilgisayar.nesnesecimleri.get(a) instanceof Tas)
+            SecimOyuncu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tas.png")));
+        else if(bilgisayar.nesnesecimleri.get(a) instanceof Kagit)
+            SecimOyuncu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kagıt.png")));
+        else if(bilgisayar.nesnesecimleri.get(a) instanceof Makas)
+            SecimOyuncu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/makas.png")));
+        if(kullanici.nesnesecimleri.get(0) instanceof Tas)
+            SecimOyuncu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tas.png")));
+        else if(kullanici.nesnesecimleri.get(0) instanceof Kagit)
+            SecimOyuncu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kagıt.png")));
+        else if(kullanici.nesnesecimleri.get(0) instanceof Makas)
+            SecimOyuncu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/makas.png")));
+        if (bilgisayar.nesnesecimleri.get(a).getDayaniklilik()<=0) {
+            Oyun.logger.info("Bilgisayar'ın "+bilgisayar.nesnesecimleri.get(a).getNesneismi()+" nesnesi silindi.");
+            bilgisayar.nesnesecimleri.get(a).setDayaniklilik(0);
+            bilgisayar.nesnesecimleri.remove(a);
+        }
+        if (kullanici.nesnesecimleri.get(0).getDayaniklilik()<=0) {
+            Oyun.logger.info("Kullanıcı'nın "+kullanici.nesnesecimleri.get(0).getNesneismi()+" nesnesi silindi");
+            kullanici.nesnesecimleri.get(0).setDayaniklilik(0);
+            nesnesayisi--;
+            sayac--;
+            Hamle1.setEnabled(false);
+        }
+        skor1=kullanici.skorGoster(kullanici.nesnesecimleri);
+        skor2=bilgisayar.skorGoster(bilgisayar.nesnesecimleri);
+        Hamle1.setEnabled(false);
+    }//GEN-LAST:event_Hamle1ActionPerformed
+
+    private void Hamle2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Hamle2ActionPerformed
+        sayac++;
+        kontrol++;
+        if(secim[1].equals("Tas"))
+            SecimOyuncu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tas.png")));
+        if(secim[1].equals("Kağıt"))
+            SecimOyuncu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kagıt.png")));
+        if(secim[1].equals("Makas"))
+            SecimOyuncu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/makas.png")));
+        int a=bilgisayar.nesneSec();
+        Oyun.logger.info("Kullanici "+ kullanici.nesnesecimleri.get(1).getNesneismi()+" nesnesini seçti");
+        Oyun.logger.info("Bilgisayar "+ bilgisayar.nesnesecimleri.get(a).getNesneismi()+" nesnesini seçti");
+        double etki1 = kullanici.nesnesecimleri.get(1).etkiHesapla(bilgisayar.nesnesecimleri.get(a));
+        double etki = bilgisayar.nesnesecimleri.get(a).etkiHesapla(kullanici.nesnesecimleri.get(1));
+        Oyun.logger.info(kullanici.nesnesecimleri.get(1).getNesneismi()+" nesnesinin verdiği etki : "+etki1);
+        Oyun.logger.info(bilgisayar.nesnesecimleri.get(a).getNesneismi()+" nesnesinin verdiği etki : "+etki);
+        int kazanan=0,kazanan1=0;
+        if (etki<etki1){
+            kazanan1=1;
+        }
+        else if(etki>etki1){
+            kazanan=1;
+        }
+        kullanici.nesnesecimleri.get(1).durumGuncelle(etki,kazanan1);
+        bilgisayar.nesnesecimleri.get(a).durumGuncelle(etki1,kazanan);
+        Oyun.logger.info(kullanici.nesnesecimleri.get(1).getNesneismi()+" nesnesi puanları güncellendi.");
+        Oyun.logger.info(bilgisayar.nesnesecimleri.get(a).getNesneismi()+" nesnesi puanları güncellendi.");
+        if (bilgisayar.nesnesecimleri.get(a).nesnePuaniGoster()>=30){
+            if (bilgisayar.nesnesecimleri.get(a).getClass().getSimpleName().equals("Tas")){
+                bilgisayar.nesnesecimleri.set(a,new Agir_Tas());
+                Oyun.logger.info("Bilgisayar'ın Taş nesnesi Ağır Taş nesnesine terfi edildi.");
+            }
+            if (bilgisayar.nesnesecimleri.get(a).getClass().getSimpleName().equals("Kagit")){
+                bilgisayar.nesnesecimleri.set(a,new Ozel_Kagit());
+                Oyun.logger.info("Bilgisayar'ın Kağıt nesnesi Özel Kağıt nesnesine terfi edildi.");
+            }
+            if (bilgisayar.nesnesecimleri.get(a).getClass().getSimpleName().equals("Makas")){
+                bilgisayar.nesnesecimleri.set(a,new Usta_Makas());
+                Oyun.logger.info("Bilgisayar'ın Makas nesnesi Usta Makas nesnesine terfi edildi.");
+            }
+        }
+        if (kullanici.nesnesecimleri.get(1).nesnePuaniGoster()>=30){
+            if (kullanici.nesnesecimleri.get(1).getClass().getSimpleName().equals("Tas")) {
+                kullanici.nesnesecimleri.set(1, new Agir_Tas());
+                Hamle2.setBackground(new java.awt.Color(102,0,102));
+                Oyun.logger.info("Kullanıcı'nın Taş nesnesi Ağır Taş nesnesine terfi edildi.");
+            }
+            if (kullanici.nesnesecimleri.get(1).getClass().getSimpleName().equals("Kagit")) {
+                kullanici.nesnesecimleri.set(1, new Ozel_Kagit());
+                Hamle2.setBackground(new java.awt.Color(102,0,102));
+                Oyun.logger.info("Kullanıcı'nın Kağıt nesnesi Özel Kağıt nesnesine terfi edildi.");
+            }
+            if (kullanici.nesnesecimleri.get(1).getClass().getSimpleName().equals("Makas")){
+                Hamle2.setBackground(new java.awt.Color(102,0,102));
+                kullanici.nesnesecimleri.set(1,new Usta_Makas());
+                Oyun.logger.info("Kullanıcı'nın Makas nesnesi Usta Makas nesnesine terfi edildi.");
+            }
+        }
+        if(bilgisayar.nesnesecimleri.get(a) instanceof Tas)
+            SecimOyuncu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tas.png")));
+        else if(bilgisayar.nesnesecimleri.get(a) instanceof Kagit)
+            SecimOyuncu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kagıt.png")));
+        else if(bilgisayar.nesnesecimleri.get(a) instanceof Makas)
+            SecimOyuncu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/makas.png")));
+        if (bilgisayar.nesnesecimleri.get(a).getDayaniklilik()<=0){
+            Oyun.logger.info("Bilgisayar'ın "+bilgisayar.nesnesecimleri.get(a).getNesneismi()+" nesnesi silindi.");
+            bilgisayar.nesnesecimleri.get(a).setDayaniklilik(0);
+            bilgisayar.nesnesecimleri.remove(a);
+        }
+        if (kullanici.nesnesecimleri.get(1).getDayaniklilik()<=0) {
+            Oyun.logger.info("Kullanıcı'nın "+kullanici.nesnesecimleri.get(1).getNesneismi()+" nesnesi silindi");
+            kullanici.nesnesecimleri.get(1).setDayaniklilik(0);
+            nesnesayisi--;
+            sayac--;
+            Hamle2.setEnabled(false);
+        }
+        skor1=kullanici.skorGoster(kullanici.nesnesecimleri);
+        skor2=bilgisayar.skorGoster(bilgisayar.nesnesecimleri);
+        Hamle2.setEnabled(false);
+    }//GEN-LAST:event_Hamle2ActionPerformed
+
+    private void Hamle3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Hamle3ActionPerformed
+        sayac++;
+        kontrol++;
+        if(secim[2].equals("Tas"))
+            SecimOyuncu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tas.png")));
+        if(secim[2].equals("Kağıt"))
+            SecimOyuncu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kagıt.png")));
+        if(secim[2].equals("Makas"))
+            SecimOyuncu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/makas.png")));
+        int a=bilgisayar.nesneSec();
+        Oyun.logger.info("Kullanici "+ kullanici.nesnesecimleri.get(2).getNesneismi()+" nesnesini seçti");
+        Oyun.logger.info("Bilgisayar "+ bilgisayar.nesnesecimleri.get(a).getNesneismi()+" nesnesini seçti");
+        double etki1 = kullanici.nesnesecimleri.get(2).etkiHesapla(bilgisayar.nesnesecimleri.get(a));
+        double etki = bilgisayar.nesnesecimleri.get(a).etkiHesapla(kullanici.nesnesecimleri.get(2));
+        Oyun.logger.info(kullanici.nesnesecimleri.get(2).getNesneismi()+" nesnesinin verdiği etki : "+etki1);
+        Oyun.logger.info(bilgisayar.nesnesecimleri.get(a).getNesneismi()+" nesnesinin verdiği etki : "+etki);
+        int kazanan=0,kazanan1=0;
+        if (etki<etki1){
+            kazanan1=1;
+        }
+        else if(etki>etki1){
+            kazanan=1;
+        }
+        kullanici.nesnesecimleri.get(2).durumGuncelle(etki,kazanan1);
+        bilgisayar.nesnesecimleri.get(a).durumGuncelle(etki1,kazanan);
+        Oyun.logger.info(kullanici.nesnesecimleri.get(2).getNesneismi()+" nesnesi puanları güncellendi.");
+        Oyun.logger.info(bilgisayar.nesnesecimleri.get(a).getNesneismi()+" nesnesi puanları güncellendi.");
+        if (bilgisayar.nesnesecimleri.get(a).nesnePuaniGoster()>=30){
+            if (bilgisayar.nesnesecimleri.get(a).getClass().getSimpleName().equals("Tas")){
+                bilgisayar.nesnesecimleri.set(a,new Agir_Tas());
+                Oyun.logger.info("Bilgisayar'ın Taş nesnesi Ağır Taş nesnesine terfi edildi.");
+            }
+            if (bilgisayar.nesnesecimleri.get(a).getClass().getSimpleName().equals("Kagit")){
+                bilgisayar.nesnesecimleri.set(a,new Ozel_Kagit());
+                Oyun.logger.info("Bilgisayar'ın Kağıt nesnesi Özel Kağıt nesnesine terfi edildi.");
+            }
+            if (bilgisayar.nesnesecimleri.get(a).getClass().getSimpleName().equals("Makas")){
+                bilgisayar.nesnesecimleri.set(a,new Usta_Makas());
+                Oyun.logger.info("Bilgisayar'ın Makas nesnesi Usta Makas nesnesine terfi edildi.");
+            }
+        }
+        if (kullanici.nesnesecimleri.get(2).nesnePuaniGoster()>=30){
+            if (kullanici.nesnesecimleri.get(2).getClass().getSimpleName().equals("Tas")) {
+                kullanici.nesnesecimleri.set(2, new Agir_Tas());
+                Hamle3.setBackground(new java.awt.Color(102,0,102));
+                Oyun.logger.info("Kullanıcı'nın Taş nesnesi Ağır Taş nesnesine terfi edildi.");
+            }
+            if (kullanici.nesnesecimleri.get(2).getClass().getSimpleName().equals("Kagit")) {
+                kullanici.nesnesecimleri.set(2, new Ozel_Kagit());
+                Hamle3.setBackground(new java.awt.Color(102,0,102));
+                Oyun.logger.info("Kullanıcı'nın Kağıt nesnesi Özel Kağıt nesnesine terfi edildi.");
+            }
+            if (kullanici.nesnesecimleri.get(2).getClass().getSimpleName().equals("Makas")){
+                Hamle3.setBackground(new java.awt.Color(102,0,102));
+                kullanici.nesnesecimleri.set(2,new Usta_Makas());
+                Oyun.logger.info("Kullanıcı'nın Makas nesnesi Usta Makas nesnesine terfi edildi.");
+            }
+        }
+        if(bilgisayar.nesnesecimleri.get(a) instanceof Tas)
+            SecimOyuncu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tas.png")));
+        else if(bilgisayar.nesnesecimleri.get(a) instanceof Kagit)
+            SecimOyuncu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kagıt.png")));
+        else if(bilgisayar.nesnesecimleri.get(a) instanceof Makas)
+            SecimOyuncu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/makas.png")));
+        if (bilgisayar.nesnesecimleri.get(a).getDayaniklilik()<=0) {
+            Oyun.logger.info("Bilgisayar'ın "+bilgisayar.nesnesecimleri.get(a).getNesneismi()+" nesnesi silindi.");
+            bilgisayar.nesnesecimleri.get(a).setDayaniklilik(0);
+            bilgisayar.nesnesecimleri.remove(a);
+        }
+        if (kullanici.nesnesecimleri.get(2).getDayaniklilik()<=0) {
+            Oyun.logger.info("Kullanıcı'nın "+kullanici.nesnesecimleri.get(2).getNesneismi()+" nesnesi silindi");
+            kullanici.nesnesecimleri.get(2).setDayaniklilik(0);
+            nesnesayisi--;
+            sayac--;
+            Hamle3.setEnabled(false);
+        }
+        skor1=kullanici.skorGoster(kullanici.nesnesecimleri);
+        skor2=bilgisayar.skorGoster(bilgisayar.nesnesecimleri);
+        Hamle3.setEnabled(false);
+    }//GEN-LAST:event_Hamle3ActionPerformed
+
+    private void Hamle4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Hamle4ActionPerformed
+        sayac++;
+        kontrol++;
+        if(secim[3].equals("Tas"))
+            SecimOyuncu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tas.png")));
+        if(secim[3].equals("Kağıt"))
+            SecimOyuncu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kagıt.png")));
+        if(secim[3].equals("Makas"))
+            SecimOyuncu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/makas.png")));
+        int a=bilgisayar.nesneSec();
+        Oyun.logger.info("Kullanici "+ kullanici.nesnesecimleri.get(3).getNesneismi()+" nesnesini seçti");
+        Oyun.logger.info("Bilgisayar "+ bilgisayar.nesnesecimleri.get(a).getNesneismi()+" nesnesini seçti");
+        double etki1 = kullanici.nesnesecimleri.get(3).etkiHesapla(bilgisayar.nesnesecimleri.get(a));
+        double etki = bilgisayar.nesnesecimleri.get(a).etkiHesapla(kullanici.nesnesecimleri.get(3));
+        Oyun.logger.info(kullanici.nesnesecimleri.get(3).getNesneismi()+" nesnesinin verdiği etki : "+etki1);
+        Oyun.logger.info(bilgisayar.nesnesecimleri.get(a).getNesneismi()+" nesnesinin verdiği etki : "+etki);
+        int kazanan=0,kazanan1=0;
+        if (etki<etki1){
+            kazanan1=1;
+        }
+        else if(etki>etki1){
+            kazanan=1;
+        }
+        kullanici.nesnesecimleri.get(3).durumGuncelle(etki,kazanan1);
+        bilgisayar.nesnesecimleri.get(a).durumGuncelle(etki1,kazanan);
+        Oyun.logger.info(kullanici.nesnesecimleri.get(3).getNesneismi()+" nesnesi puanları güncellendi.");
+        Oyun.logger.info(bilgisayar.nesnesecimleri.get(a).getNesneismi()+" nesnesi puanları güncellendi.");
+        if (bilgisayar.nesnesecimleri.get(a).nesnePuaniGoster()>=30){
+            if (bilgisayar.nesnesecimleri.get(a).getClass().getSimpleName().equals("Tas")){
+                bilgisayar.nesnesecimleri.set(a,new Agir_Tas());
+                Oyun.logger.info("Bilgisayar'ın Taş nesnesi Ağır Taş nesnesine terfi edildi.");
+            }
+            if (bilgisayar.nesnesecimleri.get(a).getClass().getSimpleName().equals("Kagit")){
+                bilgisayar.nesnesecimleri.set(a,new Ozel_Kagit());
+                Oyun.logger.info("Bilgisayar'ın Kağıt nesnesi Özel Kağıt nesnesine terfi edildi.");
+            }
+            if (bilgisayar.nesnesecimleri.get(a).getClass().getSimpleName().equals("Makas")){
+                bilgisayar.nesnesecimleri.set(a,new Usta_Makas());
+                Oyun.logger.info("Bilgisayar'ın Makas nesnesi Usta Makas nesnesine terfi edildi.");
+            }
+        }
+        if (kullanici.nesnesecimleri.get(3).nesnePuaniGoster()>=30){
+            if (kullanici.nesnesecimleri.get(3).getClass().getSimpleName().equals("Tas")) {
+                kullanici.nesnesecimleri.set(3, new Agir_Tas());
+                Hamle4.setBackground(new java.awt.Color(102,0,102));
+                Oyun.logger.info("Kullanıcı'nın Taş nesnesi Ağır Taş nesnesine terfi edildi.");
+            }
+            if (kullanici.nesnesecimleri.get(3).getClass().getSimpleName().equals("Kagit")) {
+                kullanici.nesnesecimleri.set(3, new Ozel_Kagit());
+                Hamle4.setBackground(new java.awt.Color(102,0,102));
+                Oyun.logger.info("Kullanıcı'nın Kağıt nesnesi Özel Kağıt nesnesine terfi edildi.");
+            }
+            if (kullanici.nesnesecimleri.get(3).getClass().getSimpleName().equals("Makas")){
+                Hamle4.setBackground(new java.awt.Color(102,0,102));
+                kullanici.nesnesecimleri.set(3,new Usta_Makas());
+                Oyun.logger.info("Kullanıcı'nın Makas nesnesi Usta Makas nesnesine terfi edildi.");
+            }
+        }
+        if(bilgisayar.nesnesecimleri.get(a) instanceof Tas)
+            SecimOyuncu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tas.png")));
+        else if(bilgisayar.nesnesecimleri.get(a) instanceof Kagit)
+            SecimOyuncu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kagıt.png")));
+        else if(bilgisayar.nesnesecimleri.get(a) instanceof Makas)
+            SecimOyuncu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/makas.png")));
+        if (bilgisayar.nesnesecimleri.get(a).getDayaniklilik()<=0) {
+            Oyun.logger.info("Bilgisayar'ın "+bilgisayar.nesnesecimleri.get(a).getNesneismi()+" nesnesi silindi.");
+            bilgisayar.nesnesecimleri.get(a).setDayaniklilik(0);
+            bilgisayar.nesnesecimleri.remove(a);
+        }
+        if (kullanici.nesnesecimleri.get(3).getDayaniklilik()<=0) {
+            Oyun.logger.info("Kullanıcı'nın "+kullanici.nesnesecimleri.get(3).getNesneismi()+" nesnesi silindi");
+            kullanici.nesnesecimleri.get(3).setDayaniklilik(0);
+            nesnesayisi--;
+            sayac--;
+            Hamle4.setEnabled(false);
+        }
+        skor1=kullanici.skorGoster(kullanici.nesnesecimleri);
+        skor2=bilgisayar.skorGoster(bilgisayar.nesnesecimleri);
+        Hamle4.setEnabled(false);
+    }//GEN-LAST:event_Hamle4ActionPerformed
+
+    private void Hamle5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Hamle5ActionPerformed
+        sayac++;
+        kontrol++;
+        if(secim[4].equals("Tas"))
+            SecimOyuncu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tas.png")));
+        if(secim[4].equals("Kağıt"))
+            SecimOyuncu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kagıt.png")));
+        if(secim[4].equals("Makas"))
+            SecimOyuncu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/makas.png")));
+        int a=bilgisayar.nesneSec();
+        Oyun.logger.info("Kullanici "+ kullanici.nesnesecimleri.get(4).getNesneismi()+" nesnesini seçti");
+        Oyun.logger.info("Bilgisayar "+ bilgisayar.nesnesecimleri.get(a).getNesneismi()+" nesnesini seçti");
+        double etki1 = kullanici.nesnesecimleri.get(4).etkiHesapla(bilgisayar.nesnesecimleri.get(a));
+        double etki = bilgisayar.nesnesecimleri.get(a).etkiHesapla(kullanici.nesnesecimleri.get(4));
+        Oyun.logger.info(kullanici.nesnesecimleri.get(4).getNesneismi()+" nesnesinin verdiği etki : "+etki1);
+        Oyun.logger.info(bilgisayar.nesnesecimleri.get(a).getNesneismi()+" nesnesinin verdiği etki : "+etki);
+        int kazanan=0,kazanan1=0;
+        if (etki<etki1){
+            kazanan1=1;
+        }
+        else if(etki>etki1){
+            kazanan=1;
+        }
+        kullanici.nesnesecimleri.get(4).durumGuncelle(etki,kazanan1);
+        bilgisayar.nesnesecimleri.get(a).durumGuncelle(etki1,kazanan);
+        Oyun.logger.info(kullanici.nesnesecimleri.get(4).getNesneismi()+" nesnesi puanları güncellendi.");
+        Oyun.logger.info(bilgisayar.nesnesecimleri.get(a).getNesneismi()+" nesnesi puanları güncellendi.");
+        if (bilgisayar.nesnesecimleri.get(a).nesnePuaniGoster()>=30){
+            if (bilgisayar.nesnesecimleri.get(a).getClass().getSimpleName().equals("Tas")){
+                bilgisayar.nesnesecimleri.set(a,new Agir_Tas());
+                Oyun.logger.info("Bilgisayar'ın Taş nesnesi Ağır Taş nesnesine terfi edildi.");
+            }
+            if (bilgisayar.nesnesecimleri.get(a).getClass().getSimpleName().equals("Kagit")){
+                bilgisayar.nesnesecimleri.set(a,new Ozel_Kagit());
+                Oyun.logger.info("Bilgisayar'ın Kağıt nesnesi Özel Kağıt nesnesine terfi edildi.");
+            }
+            if (bilgisayar.nesnesecimleri.get(a).getClass().getSimpleName().equals("Makas")){
+                bilgisayar.nesnesecimleri.set(a,new Usta_Makas());
+                Oyun.logger.info("Bilgisayar'ın Makas nesnesi Usta Makas nesnesine terfi edildi.");
+            }
+        }
+        if (kullanici.nesnesecimleri.get(4).nesnePuaniGoster()>=30){
+            if (kullanici.nesnesecimleri.get(4).getClass().getSimpleName().equals("Tas")) {
+                kullanici.nesnesecimleri.set(4, new Agir_Tas());
+                Hamle5.setBackground(new java.awt.Color(102,0,102));
+                Oyun.logger.info("Kullanıcı'nın Taş nesnesi Ağır Taş nesnesine terfi edildi.");
+            }
+            if (kullanici.nesnesecimleri.get(4).getClass().getSimpleName().equals("Kagit")) {
+                kullanici.nesnesecimleri.set(4, new Ozel_Kagit());
+                Hamle5.setBackground(new java.awt.Color(102,0,102));
+                Oyun.logger.info("Kullanıcı'nın Kağıt nesnesi Özel Kağıt nesnesine terfi edildi.");
+            }
+            if (kullanici.nesnesecimleri.get(4).getClass().getSimpleName().equals("Makas")){
+                Hamle5.setBackground(new java.awt.Color(102,0,102));
+                kullanici.nesnesecimleri.set(4,new Usta_Makas());
+                Oyun.logger.info("Kullanıcı'nın Makas nesnesi Usta Makas nesnesine terfi edildi.");
+            }
+        }
+        if(bilgisayar.nesnesecimleri.get(a) instanceof Tas)
+            SecimOyuncu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tas.png")));
+        else if(bilgisayar.nesnesecimleri.get(a) instanceof Kagit)
+            SecimOyuncu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kagıt.png")));
+        else if(bilgisayar.nesnesecimleri.get(a) instanceof Makas)
+            SecimOyuncu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/makas.png")));
+        if (bilgisayar.nesnesecimleri.get(a).getDayaniklilik()<=0) {
+            Oyun.logger.info("Bilgisayar'ın "+bilgisayar.nesnesecimleri.get(a).getNesneismi()+" nesnesi silindi.");
+            bilgisayar.nesnesecimleri.get(a).setDayaniklilik(0);
+            bilgisayar.nesnesecimleri.remove(a);
+        }
+        if (kullanici.nesnesecimleri.get(4).getDayaniklilik()<=0) {
+            Oyun.logger.info("Kullanıcı'nın "+kullanici.nesnesecimleri.get(4).getNesneismi()+" nesnesi silindi");
+            kullanici.nesnesecimleri.get(4).setDayaniklilik(0);
+            nesnesayisi--;
+            sayac--;
+            Hamle5.setEnabled(false);
+        }
+        skor1=kullanici.skorGoster(kullanici.nesnesecimleri);
+        skor2=bilgisayar.skorGoster(bilgisayar.nesnesecimleri);
+        Hamle5.setEnabled(false);
+    }//GEN-LAST:event_Hamle5ActionPerformed
+
+    private void HamleGosterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HamleGosterActionPerformed
+        Oyuncu1Skor.setText(String.valueOf(skor2));
+        Oyuncu2Skor.setText(String.valueOf(skor1));
+        KalanNesne.setText(String.valueOf(bilgisayar.nesnesecimleri.size()));
+        Hamle1Dayanıklılık.setText(String.valueOf(kullanici.nesnesecimleri.get(0).getDayaniklilik()));
+        Hamle2Dayanıklılık.setText(String.valueOf(kullanici.nesnesecimleri.get(1).getDayaniklilik()));
+        Hamle3Dayanıklılık.setText(String.valueOf(kullanici.nesnesecimleri.get(2).getDayaniklilik()));
+        Hamle4Dayanıklılık.setText(String.valueOf(kullanici.nesnesecimleri.get(3).getDayaniklilik()));
+        Hamle5Dayanıklılık.setText(String.valueOf(kullanici.nesnesecimleri.get(4).getDayaniklilik()));
+        Hamle1Seviye.setText(String.valueOf(kullanici.nesnesecimleri.get(0).getSeviyepuani()));
+        Hamle2Seviye.setText(String.valueOf(kullanici.nesnesecimleri.get(1).getSeviyepuani()));
+        Hamle3Seviye.setText(String.valueOf(kullanici.nesnesecimleri.get(2).getSeviyepuani()));
+        Hamle4Seviye.setText(String.valueOf(kullanici.nesnesecimleri.get(3).getSeviyepuani()));
+        Hamle5Seviye.setText(String.valueOf(kullanici.nesnesecimleri.get(4).getSeviyepuani()));
+        Hamle1Seviye.setVisible(true);
+        Hamle1Dayanıklılık.setVisible(true);
+        Hamle2Seviye.setVisible(true);
+        Hamle2Dayanıklılık.setVisible(true);
+        Hamle3Seviye.setVisible(true);
+        Hamle3Dayanıklılık.setVisible(true);
+        Hamle4Seviye.setVisible(true);
+        Hamle4Dayanıklılık.setVisible(true);
+        Hamle5Seviye.setVisible(true);
+        Hamle5Dayanıklılık.setVisible(true);
+        if(secim[0].equals("Tas")){
+            Hamle1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tas2.png")));
+        }
+        else if(secim[0].equals("Kağıt")){
+            Hamle1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kagıt2.png")));
+        }
+        else if(secim[0].equals("Makas")){
+            Hamle1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/makas2.png")));
+        }
+        if(secim[1].equals("Tas")){
+            Hamle2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tas2.png")));
+        }
+        else if(secim[1].equals("Kağıt")){
+            Hamle2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kagıt2.png")));
+        }
+        else if(secim[1].equals("Makas")){
+            Hamle2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/makas2.png")));
+        }
+        
+        
+        if(secim[2].equals("Tas")){
+            Hamle3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tas2.png")));
+        }
+        else if(secim[2].equals("Kağıt")){
+            Hamle3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kagıt2.png")));
+        }
+        else if(secim[2].equals("Makas")){
+            Hamle3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/makas2.png")));
+        }
+        
+        
+        if(secim[3].equals("Tas")){
+            Hamle4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tas2.png")));
+        }
+        else if(secim[3].equals("Kağıt")){
+            Hamle4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kagıt2.png")));
+        }
+        else if(secim[3].equals("Makas")){
+            Hamle4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/makas2.png")));
+        }
+        
+        
+        if(secim[4]=="Tas"){
+            Hamle5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tas2.png")));
+        }
+        else if(secim[4]=="Kağıt"){
+            Hamle5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kagıt2.png")));
+        }
+        else if(secim[4]=="Makas"){
+            Hamle5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/makas2.png")));
+        }
+        
+        Hamle1.setVisible(true);
+        Hamle2.setVisible(true);
+        Hamle3.setVisible(true);
+        Hamle4.setVisible(true);
+        Hamle5.setVisible(true);
+    }//GEN-LAST:event_HamleGosterActionPerformed
+
+    private void OynatButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OynatButtonActionPerformed
+        int boyut =bilgisayar.nesnesecimleri.size();
+        if (kontrol==hamlesayisi){
+            BitisEkrani bitis =new BitisEkrani(kullanici,bilgisayar);
+            bitis.setVisible(true);
+            setVisible(false);
+        }
+        if (boyut==0) {
+            BitisEkrani bitis=new BitisEkrani(kullanici,bilgisayar);
+           bitis.setVisible(true);
+            setVisible(false);
+        }
+        if (nesnesayisi==0) {
+            BitisEkrani bitis=new BitisEkrani(kullanici,bilgisayar);
+            bitis.setVisible(true);
+            setVisible(false);
+        }
+        if (sayac%nesnesayisi==0) {
+            Hamle1.setEnabled(true);
+            Hamle2.setEnabled(true);
+            Hamle3.setEnabled(true);
+            Hamle4.setEnabled(true);
+            Hamle5.setEnabled(true);
+            if (kullanici.nesnesecimleri.get(0).getDayaniklilik()<=0) {
+            Hamle1.setEnabled(false);
+            }
+            if (kullanici.nesnesecimleri.get(1).getDayaniklilik()<=0) {
+            Hamle2.setEnabled(false);
+            }
+            if (kullanici.nesnesecimleri.get(2).getDayaniklilik()<=0) {
+            Hamle3.setEnabled(false);
+            }
+            if (kullanici.nesnesecimleri.get(3).getDayaniklilik()<=0) {
+            Hamle4.setEnabled(false);
+            }
+            if (kullanici.nesnesecimleri.get(4).getDayaniklilik()<=0) {
+            Hamle5.setEnabled(false);
+            }
+            sayac=0;
+        }
+        Oyuncu1Skor.setText(String.valueOf(skor1));
+        Oyuncu2Skor.setText(String.valueOf(skor2));
+        KalanNesne.setText(String.valueOf(bilgisayar.nesnesecimleri.size()));
+        Hamle1Dayanıklılık.setText(String.valueOf(kullanici.nesnesecimleri.get(0).getDayaniklilik()));
+        Hamle2Dayanıklılık.setText(String.valueOf(kullanici.nesnesecimleri.get(1).getDayaniklilik()));
+        Hamle3Dayanıklılık.setText(String.valueOf(kullanici.nesnesecimleri.get(2).getDayaniklilik()));
+        Hamle4Dayanıklılık.setText(String.valueOf(kullanici.nesnesecimleri.get(3).getDayaniklilik()));
+        Hamle5Dayanıklılık.setText(String.valueOf(kullanici.nesnesecimleri.get(4).getDayaniklilik()));
+        Hamle1Seviye.setText(String.valueOf(kullanici.nesnesecimleri.get(0).getSeviyepuani()));
+        Hamle2Seviye.setText(String.valueOf(kullanici.nesnesecimleri.get(1).getSeviyepuani()));
+        Hamle3Seviye.setText(String.valueOf(kullanici.nesnesecimleri.get(2).getSeviyepuani()));
+        Hamle4Seviye.setText(String.valueOf(kullanici.nesnesecimleri.get(3).getSeviyepuani()));
+        Hamle5Seviye.setText(String.valueOf(kullanici.nesnesecimleri.get(4).getSeviyepuani()));
+
+    }//GEN-LAST:event_OynatButtonActionPerformed
+    private void Hamle3DayanıklılıkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Hamle3DayanıklılıkActionPerformed
+
+    }//GEN-LAST:event_Hamle3DayanıklılıkActionPerformed
+
+    private void Hamle2DayanıklılıkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Hamle2DayanıklılıkActionPerformed
+
+    }//GEN-LAST:event_Hamle2DayanıklılıkActionPerformed
+
+    private void Hamle1DayanıklılıkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Hamle1DayanıklılıkActionPerformed
+
+    }//GEN-LAST:event_Hamle1DayanıklılıkActionPerformed
+
+    private void Hamle1SeviyeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Hamle1SeviyeActionPerformed
+
+    }//GEN-LAST:event_Hamle1SeviyeActionPerformed
+
+    private void Hamle2SeviyeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Hamle2SeviyeActionPerformed
+
+    }//GEN-LAST:event_Hamle2SeviyeActionPerformed
+
+    private void Hamle3SeviyeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Hamle3SeviyeActionPerformed
+
+    }//GEN-LAST:event_Hamle3SeviyeActionPerformed
+
+    private void Hamle4DayanıklılıkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Hamle4DayanıklılıkActionPerformed
+
+    }//GEN-LAST:event_Hamle4DayanıklılıkActionPerformed
+
+    private void Hamle4SeviyeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Hamle4SeviyeActionPerformed
+
+    }//GEN-LAST:event_Hamle4SeviyeActionPerformed
+
+    private void Hamle5DayanıklılıkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Hamle5DayanıklılıkActionPerformed
+
+    }//GEN-LAST:event_Hamle5DayanıklılıkActionPerformed
+
+    private void Hamle5SeviyeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Hamle5SeviyeActionPerformed
+
+    }//GEN-LAST:event_Hamle5SeviyeActionPerformed
+
+    private void HamleSayısıActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HamleSayısıActionPerformed
+        hh = HamleSayısı.getText();
+        hamlesayisi = Integer.parseInt(hh);
+        HamleGoster.setEnabled(true);
+        Oyun.logger.info("Hamle sayısı girildi: "+hamlesayisi);
+    }//GEN-LAST:event_HamleSayısıActionPerformed
+
+    private void Oyuncu1SkorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Oyuncu1SkorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Oyuncu1SkorActionPerformed
+
+    
 
     /**
      * @param args the command line arguments
@@ -222,26 +1157,62 @@
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new OyunEkrani1().setVisible(true);
+                new OyunEkrani1(new Kullanici(),new Bilgisayar()).setVisible(true);
             }
         });
     }
 
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Oyuncu1Hamle;
+    private javax.swing.JButton Hamle1;
+    private javax.swing.JTextField Hamle1Dayanıklılık;
+    private javax.swing.JTextField Hamle1Seviye;
+    private javax.swing.JButton Hamle2;
+    private javax.swing.JTextField Hamle2Dayanıklılık;
+    private javax.swing.JTextField Hamle2Seviye;
+    private javax.swing.JButton Hamle3;
+    private javax.swing.JTextField Hamle3Dayanıklılık;
+    private javax.swing.JTextField Hamle3Seviye;
+    private javax.swing.JButton Hamle4;
+    private javax.swing.JTextField Hamle4Dayanıklılık;
+    private javax.swing.JTextField Hamle4Seviye;
+    private javax.swing.JButton Hamle5;
+    private javax.swing.JTextField Hamle5Dayanıklılık;
+    private javax.swing.JTextField Hamle5Seviye;
+    private javax.swing.JButton HamleGoster;
+    private javax.swing.JTextField HamleSayısı;
+    private javax.swing.JTextField KalanNesne;
+    private javax.swing.JButton OynatButton;
+    private javax.swing.JLabel Oyuncu1Resim;
+    private javax.swing.JTextField Oyuncu1Skor;
+    private javax.swing.JLabel Oyuncu1İsim;
     private javax.swing.JLabel Oyuncu2Resim;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JTextField Oyuncu2Skor;
+    private javax.swing.JLabel Oyuncu2İsim;
+    private javax.swing.JLabel SecimOyuncu1;
+    private javax.swing.JLabel SecimOyuncu2;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
+    private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
+
+    void setSecim(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    void setSecim(String[] nesneler) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

@@ -1,0 +1,384 @@
+Kas 23, 2022 9:02:05 ÖS Oyun init
+INFO: Logger Initialized
+Kas 23, 2022 9:02:05 ÖS Oyun main
+INFO: Kullanici nesnesi oluşturuldu.
+Kas 23, 2022 9:02:05 ÖS Oyun main
+INFO: Bilgisayar nesnesi oluşturuldu.
+Kas 23, 2022 9:02:05 ÖS Oyun main
+INFO: Bilgisayar nesnesi oluşturuldu.
+Kas 23, 2022 9:02:06 ÖS OyuncuSecimi UserPcActionPerformed
+INFO: Kullanıcı - Bilgisayar Mücadelesi Seçildi.
+Kas 23, 2022 9:02:09 ÖS BilgiEkrani KullanıcıAdıActionPerformed
+INFO: Kullanıcı adı girildi
+Kas 23, 2022 9:02:10 ÖS BilgiEkrani KullanıcıIDActionPerformed
+INFO: Kullanıcı ID girildi.
+Kas 23, 2022 9:02:11 ÖS NesneSecimi bilgisayarrastgele
+INFO: Bilgisayar --> Taş nesnesini Seçti.
+Kas 23, 2022 9:02:11 ÖS NesneSecimi bilgisayarrastgele
+INFO: Bilgisayar --> Makas nesnesini Seçti.
+Kas 23, 2022 9:02:11 ÖS NesneSecimi bilgisayarrastgele
+INFO: Bilgisayar --> Makas nesnesini Seçti.
+Kas 23, 2022 9:02:11 ÖS NesneSecimi bilgisayarrastgele
+INFO: Bilgisayar --> Taş nesnesini Seçti.
+Kas 23, 2022 9:02:11 ÖS NesneSecimi bilgisayarrastgele
+INFO: Bilgisayar --> Taş nesnesini Seçti.
+Kas 23, 2022 9:02:11 ÖS NesneSecimi TasButtonActionPerformed
+INFO: Kullanıcı --> Taş nesnesini seçti.
+Kas 23, 2022 9:02:12 ÖS NesneSecimi KagitButtonActionPerformed
+INFO: Kullanıcı --> Kağıt nesnesini seçti.
+Kas 23, 2022 9:02:12 ÖS NesneSecimi MakasButtonActionPerformed
+INFO: Kullanıcı --> Makas nesnesini seçti.
+Kas 23, 2022 9:02:12 ÖS NesneSecimi TasButtonActionPerformed
+INFO: Kullanıcı --> Taş nesnesini seçti.
+Kas 23, 2022 9:02:12 ÖS NesneSecimi KagitButtonActionPerformed
+INFO: Kullanıcı --> Kağıt nesnesini seçti.
+Kas 23, 2022 9:02:14 ÖS OyunEkrani1 HamleSayısıActionPerformed
+INFO: Hamle sayısı girildi: 80
+Kas 23, 2022 9:02:16 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Kullanici Kağıt nesnesini seçti
+Kas 23, 2022 9:02:16 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Bilgisayar Makas nesnesini seçti
+Kas 23, 2022 9:02:16 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Kağıt nesnesinin verdiği etki : 1.25
+Kas 23, 2022 9:02:16 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Makas nesnesinin verdiği etki : 5.0
+Kas 23, 2022 9:02:16 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Kağıt nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:16 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Makas nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:16 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Kullanici Taş nesnesini seçti
+Kas 23, 2022 9:02:16 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Bilgisayar Taş nesnesini seçti
+Kas 23, 2022 9:02:16 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Tas@6b1ecfdc nesnesinin verdiği etki : 2.0
+Kas 23, 2022 9:02:16 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Tas@776205a nesnesinin verdiği etki : 2.0
+Kas 23, 2022 9:02:16 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Taş nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:16 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Taş nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:17 ÖS OyunEkrani1 Hamle3ActionPerformed
+INFO: Kullanici Makas nesnesini seçti
+Kas 23, 2022 9:02:17 ÖS OyunEkrani1 Hamle3ActionPerformed
+INFO: Bilgisayar Taş nesnesini seçti
+Kas 23, 2022 9:02:17 ÖS OyunEkrani1 Hamle3ActionPerformed
+INFO: Makas nesnesinin verdiği etki : 1.25
+Kas 23, 2022 9:02:17 ÖS OyunEkrani1 Hamle3ActionPerformed
+INFO: Taş nesnesinin verdiği etki : 5.0
+Kas 23, 2022 9:02:17 ÖS OyunEkrani1 Hamle3ActionPerformed
+INFO: Makas nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:17 ÖS OyunEkrani1 Hamle3ActionPerformed
+INFO: Taş nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:17 ÖS OyunEkrani1 Hamle4ActionPerformed
+INFO: Kullanici Taş nesnesini seçti
+Kas 23, 2022 9:02:17 ÖS OyunEkrani1 Hamle4ActionPerformed
+INFO: Bilgisayar Makas nesnesini seçti
+Kas 23, 2022 9:02:17 ÖS OyunEkrani1 Hamle4ActionPerformed
+INFO: Taş nesnesinin verdiği etki : 5.0
+Kas 23, 2022 9:02:17 ÖS OyunEkrani1 Hamle4ActionPerformed
+INFO: Makas nesnesinin verdiği etki : 1.25
+Kas 23, 2022 9:02:17 ÖS OyunEkrani1 Hamle4ActionPerformed
+INFO: Taş nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:17 ÖS OyunEkrani1 Hamle4ActionPerformed
+INFO: Makas nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:18 ÖS OyunEkrani1 Hamle5ActionPerformed
+INFO: Kullanici Kağıt nesnesini seçti
+Kas 23, 2022 9:02:18 ÖS OyunEkrani1 Hamle5ActionPerformed
+INFO: Bilgisayar Taş nesnesini seçti
+Kas 23, 2022 9:02:18 ÖS OyunEkrani1 Hamle5ActionPerformed
+INFO: Kağıt nesnesinin verdiği etki : 5.0
+Kas 23, 2022 9:02:18 ÖS OyunEkrani1 Hamle5ActionPerformed
+INFO: Taş nesnesinin verdiği etki : 1.25
+Kas 23, 2022 9:02:18 ÖS OyunEkrani1 Hamle5ActionPerformed
+INFO: Kağıt nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:18 ÖS OyunEkrani1 Hamle5ActionPerformed
+INFO: Taş nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:19 ÖS OyunEkrani1 Hamle3ActionPerformed
+INFO: Kullanici Makas nesnesini seçti
+Kas 23, 2022 9:02:19 ÖS OyunEkrani1 Hamle3ActionPerformed
+INFO: Bilgisayar Taş nesnesini seçti
+Kas 23, 2022 9:02:19 ÖS OyunEkrani1 Hamle3ActionPerformed
+INFO: Makas nesnesinin verdiği etki : 1.25
+Kas 23, 2022 9:02:19 ÖS OyunEkrani1 Hamle3ActionPerformed
+INFO: Taş nesnesinin verdiği etki : 5.0
+Kas 23, 2022 9:02:19 ÖS OyunEkrani1 Hamle3ActionPerformed
+INFO: Makas nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:19 ÖS OyunEkrani1 Hamle3ActionPerformed
+INFO: Taş nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:19 ÖS OyunEkrani1 Hamle3ActionPerformed
+INFO: Bilgisayar'ın Taş nesnesi Ağır Taş nesnesine terfi edildi.
+Kas 23, 2022 9:02:19 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Kullanici Kağıt nesnesini seçti
+Kas 23, 2022 9:02:19 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Bilgisayar Taş nesnesini seçti
+Kas 23, 2022 9:02:19 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Kağıt nesnesinin verdiği etki : 5.0
+Kas 23, 2022 9:02:19 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Taş nesnesinin verdiği etki : 1.25
+Kas 23, 2022 9:02:19 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Kağıt nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:19 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Taş nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:19 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Kullanici Taş nesnesini seçti
+Kas 23, 2022 9:02:19 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Bilgisayar Makas nesnesini seçti
+Kas 23, 2022 9:02:19 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Tas@6b1ecfdc nesnesinin verdiği etki : 5.0
+Kas 23, 2022 9:02:19 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Makas@3fc5e99e nesnesinin verdiği etki : 1.25
+Kas 23, 2022 9:02:19 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Taş nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:19 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Makas nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:20 ÖS OyunEkrani1 Hamle5ActionPerformed
+INFO: Kullanici Kağıt nesnesini seçti
+Kas 23, 2022 9:02:20 ÖS OyunEkrani1 Hamle5ActionPerformed
+INFO: Bilgisayar Taş nesnesini seçti
+Kas 23, 2022 9:02:20 ÖS OyunEkrani1 Hamle5ActionPerformed
+INFO: Kağıt nesnesinin verdiği etki : 5.0
+Kas 23, 2022 9:02:20 ÖS OyunEkrani1 Hamle5ActionPerformed
+INFO: Taş nesnesinin verdiği etki : 1.25
+Kas 23, 2022 9:02:20 ÖS OyunEkrani1 Hamle5ActionPerformed
+INFO: Kağıt nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:20 ÖS OyunEkrani1 Hamle5ActionPerformed
+INFO: Taş nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:20 ÖS OyunEkrani1 Hamle5ActionPerformed
+INFO: Kullanıcı'nın Kağıt nesnesi Özel Kağıt nesnesine terfi edildi.
+Kas 23, 2022 9:02:20 ÖS OyunEkrani1 Hamle4ActionPerformed
+INFO: Kullanici Taş nesnesini seçti
+Kas 23, 2022 9:02:20 ÖS OyunEkrani1 Hamle4ActionPerformed
+INFO: Bilgisayar Makas nesnesini seçti
+Kas 23, 2022 9:02:20 ÖS OyunEkrani1 Hamle4ActionPerformed
+INFO: Taş nesnesinin verdiği etki : 5.0
+Kas 23, 2022 9:02:20 ÖS OyunEkrani1 Hamle4ActionPerformed
+INFO: Makas nesnesinin verdiği etki : 1.25
+Kas 23, 2022 9:02:20 ÖS OyunEkrani1 Hamle4ActionPerformed
+INFO: Taş nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:20 ÖS OyunEkrani1 Hamle4ActionPerformed
+INFO: Makas nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:20 ÖS OyunEkrani1 Hamle4ActionPerformed
+INFO: Kullanıcı'nın Taş nesnesi Ağır Taş nesnesine terfi edildi.
+Kas 23, 2022 9:02:21 ÖS OyunEkrani1 Hamle3ActionPerformed
+INFO: Kullanici Makas nesnesini seçti
+Kas 23, 2022 9:02:21 ÖS OyunEkrani1 Hamle3ActionPerformed
+INFO: Bilgisayar Taş nesnesini seçti
+Kas 23, 2022 9:02:21 ÖS OyunEkrani1 Hamle3ActionPerformed
+INFO: Makas nesnesinin verdiği etki : 1.25
+Kas 23, 2022 9:02:21 ÖS OyunEkrani1 Hamle3ActionPerformed
+INFO: Taş nesnesinin verdiği etki : 5.0
+Kas 23, 2022 9:02:21 ÖS OyunEkrani1 Hamle3ActionPerformed
+INFO: Makas nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:21 ÖS OyunEkrani1 Hamle3ActionPerformed
+INFO: Taş nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:21 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Kullanici Kağıt nesnesini seçti
+Kas 23, 2022 9:02:21 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Bilgisayar Ağır Taş nesnesini seçti
+Kas 23, 2022 9:02:21 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Kağıt nesnesinin verdiği etki : 2.5
+Kas 23, 2022 9:02:21 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Ağır Taş nesnesinin verdiği etki : 2.5
+Kas 23, 2022 9:02:21 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Kağıt nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:21 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Ağır Taş nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:22 ÖS OyunEkrani1 Hamle4ActionPerformed
+INFO: Kullanici Ağır Taş nesnesini seçti
+Kas 23, 2022 9:02:22 ÖS OyunEkrani1 Hamle4ActionPerformed
+INFO: Bilgisayar Makas nesnesini seçti
+Kas 23, 2022 9:02:22 ÖS OyunEkrani1 Hamle4ActionPerformed
+INFO: Ağır Taş nesnesinin verdiği etki : 10.0
+Kas 23, 2022 9:02:22 ÖS OyunEkrani1 Hamle4ActionPerformed
+INFO: Makas nesnesinin verdiği etki : 0.625
+Kas 23, 2022 9:02:22 ÖS OyunEkrani1 Hamle4ActionPerformed
+INFO: Ağır Taş nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:22 ÖS OyunEkrani1 Hamle4ActionPerformed
+INFO: Makas nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:22 ÖS OyunEkrani1 Hamle4ActionPerformed
+INFO: Bilgisayar'ın Makas nesnesi silindi.
+Kas 23, 2022 9:02:22 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Kullanici Taş nesnesini seçti
+Kas 23, 2022 9:02:22 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Bilgisayar Taş nesnesini seçti
+Kas 23, 2022 9:02:22 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Tas@6b1ecfdc nesnesinin verdiği etki : 2.0
+Kas 23, 2022 9:02:22 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Tas@5ca3f906 nesnesinin verdiği etki : 2.0
+Kas 23, 2022 9:02:22 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Taş nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:22 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Taş nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:23 ÖS OyunEkrani1 Hamle5ActionPerformed
+INFO: Kullanici Özel Kağıt nesnesini seçti
+Kas 23, 2022 9:02:23 ÖS OyunEkrani1 Hamle5ActionPerformed
+INFO: Bilgisayar Taş nesnesini seçti
+Kas 23, 2022 9:02:23 ÖS OyunEkrani1 Hamle5ActionPerformed
+INFO: Özel Kağıt nesnesinin verdiği etki : 10.0
+Kas 23, 2022 9:02:23 ÖS OyunEkrani1 Hamle5ActionPerformed
+INFO: Taş nesnesinin verdiği etki : 0.625
+Kas 23, 2022 9:02:23 ÖS OyunEkrani1 Hamle5ActionPerformed
+INFO: Özel Kağıt nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:23 ÖS OyunEkrani1 Hamle5ActionPerformed
+INFO: Taş nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:24 ÖS OyunEkrani1 Hamle3ActionPerformed
+INFO: Kullanici Makas nesnesini seçti
+Kas 23, 2022 9:02:24 ÖS OyunEkrani1 Hamle3ActionPerformed
+INFO: Bilgisayar Makas nesnesini seçti
+Kas 23, 2022 9:02:24 ÖS OyunEkrani1 Hamle3ActionPerformed
+INFO: Makas nesnesinin verdiği etki : 2.0
+Kas 23, 2022 9:02:24 ÖS OyunEkrani1 Hamle3ActionPerformed
+INFO: Makas nesnesinin verdiği etki : 2.0
+Kas 23, 2022 9:02:24 ÖS OyunEkrani1 Hamle3ActionPerformed
+INFO: Makas nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:24 ÖS OyunEkrani1 Hamle3ActionPerformed
+INFO: Makas nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:25 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Kullanici Kağıt nesnesini seçti
+Kas 23, 2022 9:02:25 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Bilgisayar Ağır Taş nesnesini seçti
+Kas 23, 2022 9:02:25 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Kağıt nesnesinin verdiği etki : 2.5
+Kas 23, 2022 9:02:25 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Ağır Taş nesnesinin verdiği etki : 2.5
+Kas 23, 2022 9:02:25 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Kağıt nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:25 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Ağır Taş nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:25 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Kullanici Taş nesnesini seçti
+Kas 23, 2022 9:02:25 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Bilgisayar Taş nesnesini seçti
+Kas 23, 2022 9:02:25 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Tas@6b1ecfdc nesnesinin verdiği etki : 2.0
+Kas 23, 2022 9:02:25 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Tas@5ca3f906 nesnesinin verdiği etki : 2.0
+Kas 23, 2022 9:02:25 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Taş nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:25 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Taş nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:26 ÖS OyunEkrani1 Hamle4ActionPerformed
+INFO: Kullanici Ağır Taş nesnesini seçti
+Kas 23, 2022 9:02:26 ÖS OyunEkrani1 Hamle4ActionPerformed
+INFO: Bilgisayar Makas nesnesini seçti
+Kas 23, 2022 9:02:26 ÖS OyunEkrani1 Hamle4ActionPerformed
+INFO: Ağır Taş nesnesinin verdiği etki : 10.0
+Kas 23, 2022 9:02:26 ÖS OyunEkrani1 Hamle4ActionPerformed
+INFO: Makas nesnesinin verdiği etki : 0.625
+Kas 23, 2022 9:02:26 ÖS OyunEkrani1 Hamle4ActionPerformed
+INFO: Ağır Taş nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:26 ÖS OyunEkrani1 Hamle4ActionPerformed
+INFO: Makas nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:26 ÖS OyunEkrani1 Hamle5ActionPerformed
+INFO: Kullanici Özel Kağıt nesnesini seçti
+Kas 23, 2022 9:02:26 ÖS OyunEkrani1 Hamle5ActionPerformed
+INFO: Bilgisayar Taş nesnesini seçti
+Kas 23, 2022 9:02:26 ÖS OyunEkrani1 Hamle5ActionPerformed
+INFO: Özel Kağıt nesnesinin verdiği etki : 10.0
+Kas 23, 2022 9:02:26 ÖS OyunEkrani1 Hamle5ActionPerformed
+INFO: Taş nesnesinin verdiği etki : 0.625
+Kas 23, 2022 9:02:26 ÖS OyunEkrani1 Hamle5ActionPerformed
+INFO: Özel Kağıt nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:26 ÖS OyunEkrani1 Hamle5ActionPerformed
+INFO: Taş nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:26 ÖS OyunEkrani1 Hamle5ActionPerformed
+INFO: Bilgisayar'ın Taş nesnesi silindi.
+Kas 23, 2022 9:02:28 ÖS OyunEkrani1 Hamle3ActionPerformed
+INFO: Kullanici Makas nesnesini seçti
+Kas 23, 2022 9:02:28 ÖS OyunEkrani1 Hamle3ActionPerformed
+INFO: Bilgisayar Ağır Taş nesnesini seçti
+Kas 23, 2022 9:02:28 ÖS OyunEkrani1 Hamle3ActionPerformed
+INFO: Makas nesnesinin verdiği etki : 0.625
+Kas 23, 2022 9:02:28 ÖS OyunEkrani1 Hamle3ActionPerformed
+INFO: Ağır Taş nesnesinin verdiği etki : 10.0
+Kas 23, 2022 9:02:28 ÖS OyunEkrani1 Hamle3ActionPerformed
+INFO: Makas nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:28 ÖS OyunEkrani1 Hamle3ActionPerformed
+INFO: Ağır Taş nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:28 ÖS OyunEkrani1 Hamle3ActionPerformed
+INFO: Kullanıcı'nın Makas nesnesi silindi
+Kas 23, 2022 9:02:28 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Kullanici Kağıt nesnesini seçti
+Kas 23, 2022 9:02:28 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Bilgisayar Taş nesnesini seçti
+Kas 23, 2022 9:02:28 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Kağıt nesnesinin verdiği etki : 5.0
+Kas 23, 2022 9:02:28 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Taş nesnesinin verdiği etki : 1.25
+Kas 23, 2022 9:02:28 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Kağıt nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:28 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Taş nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:28 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Kullanıcı'nın Kağıt nesnesi Özel Kağıt nesnesine terfi edildi.
+Kas 23, 2022 9:02:28 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Bilgisayar'ın Taş nesnesi silindi.
+Kas 23, 2022 9:02:28 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Kullanici Taş nesnesini seçti
+Kas 23, 2022 9:02:28 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Bilgisayar Makas nesnesini seçti
+Kas 23, 2022 9:02:28 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Tas@6b1ecfdc nesnesinin verdiği etki : 5.0
+Kas 23, 2022 9:02:28 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Makas@4168316b nesnesinin verdiği etki : 1.25
+Kas 23, 2022 9:02:28 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Taş nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:28 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Makas nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:28 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Kullanıcı'nın Taş nesnesi Ağır Taş nesnesine terfi edildi.
+Kas 23, 2022 9:02:28 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Bilgisayar'ın Makas nesnesi silindi.
+Kas 23, 2022 9:02:29 ÖS OyunEkrani1 Hamle4ActionPerformed
+INFO: Kullanici Ağır Taş nesnesini seçti
+Kas 23, 2022 9:02:29 ÖS OyunEkrani1 Hamle4ActionPerformed
+INFO: Bilgisayar Ağır Taş nesnesini seçti
+Kas 23, 2022 9:02:29 ÖS OyunEkrani1 Hamle4ActionPerformed
+INFO: Ağır Taş nesnesinin verdiği etki : 4.0
+Kas 23, 2022 9:02:29 ÖS OyunEkrani1 Hamle4ActionPerformed
+INFO: Ağır Taş nesnesinin verdiği etki : 4.0
+Kas 23, 2022 9:02:29 ÖS OyunEkrani1 Hamle4ActionPerformed
+INFO: Ağır Taş nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:29 ÖS OyunEkrani1 Hamle4ActionPerformed
+INFO: Ağır Taş nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:29 ÖS OyunEkrani1 Hamle5ActionPerformed
+INFO: Kullanici Özel Kağıt nesnesini seçti
+Kas 23, 2022 9:02:29 ÖS OyunEkrani1 Hamle5ActionPerformed
+INFO: Bilgisayar Ağır Taş nesnesini seçti
+Kas 23, 2022 9:02:29 ÖS OyunEkrani1 Hamle5ActionPerformed
+INFO: Özel Kağıt nesnesinin verdiği etki : 5.0
+Kas 23, 2022 9:02:29 ÖS OyunEkrani1 Hamle5ActionPerformed
+INFO: Ağır Taş nesnesinin verdiği etki : 1.25
+Kas 23, 2022 9:02:29 ÖS OyunEkrani1 Hamle5ActionPerformed
+INFO: Özel Kağıt nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:29 ÖS OyunEkrani1 Hamle5ActionPerformed
+INFO: Ağır Taş nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:46 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Kullanici Özel Kağıt nesnesini seçti
+Kas 23, 2022 9:02:46 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Bilgisayar Ağır Taş nesnesini seçti
+Kas 23, 2022 9:02:46 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Özel Kağıt nesnesinin verdiği etki : 5.0
+Kas 23, 2022 9:02:46 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Ağır Taş nesnesinin verdiği etki : 1.25
+Kas 23, 2022 9:02:46 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Özel Kağıt nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:46 ÖS OyunEkrani1 Hamle2ActionPerformed
+INFO: Ağır Taş nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:47 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Kullanici Ağır Taş nesnesini seçti
+Kas 23, 2022 9:02:47 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Bilgisayar Ağır Taş nesnesini seçti
+Kas 23, 2022 9:02:47 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Agir_Tas@766a37eb nesnesinin verdiği etki : 4.0
+Kas 23, 2022 9:02:47 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Agir_Tas@62d2c7fe nesnesinin verdiği etki : 4.0
+Kas 23, 2022 9:02:47 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Ağır Taş nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:47 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Ağır Taş nesnesi puanları güncellendi.
+Kas 23, 2022 9:02:47 ÖS OyunEkrani1 Hamle1ActionPerformed
+INFO: Bilgisayar'ın Ağır Taş nesnesi silindi.
+Kas 23, 2022 9:02:48 ÖS BitisEkrani <init>
+INFO: Kullanıcı oyunu kazandı. Skor: 67.0
